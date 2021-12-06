@@ -1,5 +1,5 @@
 Timing Analyzer report for trisc
-Sat Dec 04 14:48:55 2021
+Sun Dec 05 17:09:50 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -94,117 +94,122 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.08        ;
+; Average used               ; 1.16        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.6%      ;
-;     Processor 3            ;   2.5%      ;
-;     Processor 4            ;   2.5%      ;
+;     Processor 2            ;   5.2%      ;
+;     Processor 3            ;   5.2%      ;
+;     Processor 4            ;   5.2%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                             ;
-+------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
-; Clock Name                               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                      ;
-+------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
-; ClockIn                                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockIn }                                  ;
-; IR:IR|Q[0]                               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { IR:IR|Q[0] }                               ;
-; OnOffToggle:DivideX2|state               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { OnOffToggle:DivideX2|state }               ;
-; SysClock                                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SysClock }                                 ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:comb_30|triscFSM:comb_4|state.E } ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:comb_30|triscFSM:comb_4|state.F } ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:comb_30|triscFSM:comb_4|state.H } ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:comb_30|triscFSM:comb_4|state.L } ;
-+------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                         ;
++------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------+
+; Clock Name                                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                            ;
++------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------+
+; ClockIn                                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockIn }                                        ;
+; IR:InstructionReg|Q[0]                         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { IR:InstructionReg|Q[0] }                         ;
+; OnOffToggle:DivideX2|state                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { OnOffToggle:DivideX2|state }                     ;
+; SysClock                                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SysClock }                                       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:triscPCU_inst|triscFSM:comb_4|state.E } ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:triscPCU_inst|triscFSM:comb_4|state.F } ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:triscPCU_inst|triscFSM:comb_4|state.H } ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:triscPCU_inst|triscFSM:comb_4|state.L } ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { triscPCU:triscPCU_inst|triscFSM:comb_4|state.U } ;
++------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                       ;
-+------------+-----------------+------------------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                               ; Note                                           ;
-+------------+-----------------+------------------------------------------+------------------------------------------------+
-; 119.77 MHz ; 119.77 MHz      ; ClockIn                                  ;                                                ;
-; 119.77 MHz ; 119.77 MHz      ; SysClock                                 ;                                                ;
-; 284.66 MHz ; 284.66 MHz      ; triscPCU:comb_30|triscFSM:comb_4|state.E ;                                                ;
-; 331.9 MHz  ; 331.9 MHz       ; triscPCU:comb_30|triscFSM:comb_4|state.F ;                                                ;
-; 856.9 MHz  ; 416.15 MHz      ; OnOffToggle:DivideX2|state               ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+------------------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                             ;
++------------+-----------------+------------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                     ; Note                                           ;
++------------+-----------------+------------------------------------------------+------------------------------------------------+
+; 99.7 MHz   ; 99.7 MHz        ; SysClock                                       ;                                                ;
+; 132.59 MHz ; 132.59 MHz      ; ClockIn                                        ;                                                ;
+; 271.22 MHz ; 271.22 MHz      ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ;                                                ;
+; 345.9 MHz  ; 345.9 MHz       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ;                                                ;
+; 349.9 MHz  ; 349.9 MHz       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ;                                                ;
+; 857.63 MHz ; 416.15 MHz      ; OnOffToggle:DivideX2|state                     ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                               ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; SysClock                                 ; -7.840 ; -49.329       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -7.481 ; -69.336       ;
-; ClockIn                                  ; -7.386 ; -35.797       ;
-; IR:IR|Q[0]                               ; -7.097 ; -17.714       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -6.708 ; -26.022       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; -6.175 ; -24.522       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; -5.303 ; -21.157       ;
-; OnOffToggle:DivideX2|state               ; -0.167 ; -0.334        ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                     ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; SysClock                                       ; -7.347 ; -58.167       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -7.289 ; -85.819       ;
+; ClockIn                                        ; -6.542 ; -31.786       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -6.540 ; -25.107       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -6.101 ; -23.541       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -3.327 ; -12.243       ;
+; IR:InstructionReg|Q[0]                         ; -2.746 ; -22.147       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -1.694 ; -6.429        ;
+; OnOffToggle:DivideX2|state                     ; -0.166 ; -0.324        ;
++------------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -0.121 ; -0.121        ;
-; IR:IR|Q[0]                               ; -0.116 ; -0.116        ;
-; OnOffToggle:DivideX2|state               ; 0.347  ; 0.000         ;
-; SysClock                                 ; 0.994  ; 0.000         ;
-; ClockIn                                  ; 1.637  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; 1.874  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 4.161  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 5.040  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                     ;
++------------------------------------------------+-------+---------------+
+; Clock                                          ; Slack ; End Point TNS ;
++------------------------------------------------+-------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 0.336 ; 0.000         ;
+; OnOffToggle:DivideX2|state                     ; 0.348 ; 0.000         ;
+; IR:InstructionReg|Q[0]                         ; 0.353 ; 0.000         ;
+; SysClock                                       ; 0.977 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.979 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 1.271 ; 0.000         ;
+; ClockIn                                        ; 1.323 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 1.648 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 4.785 ; 0.000         ;
++------------------------------------------------+-------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 85C Model Recovery Summary                            ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -3.052 ; -11.749       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -2.879 ; -11.516       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; -1.636 ; -6.161        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; -0.949 ; -3.009        ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary                                  ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -2.531 ; -10.071       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -2.221 ; -8.690        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -2.057 ; -6.962        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -1.337 ; -5.143        ;
++------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------+
-; Slow 1200mV 85C Model Removal Summary                            ;
-+------------------------------------------+-------+---------------+
-; Clock                                    ; Slack ; End Point TNS ;
-+------------------------------------------+-------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.045 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 1.024 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; 1.202 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; 1.760 ; 0.000         ;
-+------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal Summary                                  ;
++------------------------------------------------+-------+---------------+
+; Clock                                          ; Slack ; End Point TNS ;
++------------------------------------------------+-------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.666 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 1.050 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 1.546 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1.856 ; 0.000         ;
++------------------------------------------------+-------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary                 ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; SysClock                                 ; -3.000 ; -59.105       ;
-; ClockIn                                  ; -3.000 ; -31.045       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -1.403 ; -11.224       ;
-; OnOffToggle:DivideX2|state               ; -1.403 ; -5.612        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -1.403 ; -5.612        ;
-; IR:IR|Q[0]                               ; 0.334  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.352  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0.423  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                       ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; SysClock                                       ; -3.000 ; -59.105       ;
+; ClockIn                                        ; -3.000 ; -31.045       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -1.403 ; -11.224       ;
+; OnOffToggle:DivideX2|state                     ; -1.403 ; -5.612        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -1.403 ; -5.612        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -1.403 ; -5.612        ;
+; IR:InstructionReg|Q[0]                         ; 0.310  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0.414  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.431  ; 0.000         ;
++------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -213,90 +218,94 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                        ;
-+------------+-----------------+------------------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                               ; Note                                           ;
-+------------+-----------------+------------------------------------------+------------------------------------------------+
-; 127.93 MHz ; 127.93 MHz      ; ClockIn                                  ;                                                ;
-; 127.93 MHz ; 127.93 MHz      ; SysClock                                 ;                                                ;
-; 304.88 MHz ; 304.88 MHz      ; triscPCU:comb_30|triscFSM:comb_4|state.E ;                                                ;
-; 362.06 MHz ; 362.06 MHz      ; triscPCU:comb_30|triscFSM:comb_4|state.F ;                                                ;
-; 938.09 MHz ; 416.15 MHz      ; OnOffToggle:DivideX2|state               ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+------------------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                              ;
++------------+-----------------+------------------------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                     ; Note                                           ;
++------------+-----------------+------------------------------------------------+------------------------------------------------+
+; 104.67 MHz ; 104.67 MHz      ; SysClock                                       ;                                                ;
+; 141.68 MHz ; 141.68 MHz      ; ClockIn                                        ;                                                ;
+; 291.63 MHz ; 291.63 MHz      ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ;                                                ;
+; 377.36 MHz ; 377.36 MHz      ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ;                                                ;
+; 380.08 MHz ; 380.08 MHz      ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ;                                                ;
+; 939.85 MHz ; 416.15 MHz      ; OnOffToggle:DivideX2|state                     ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                                ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; SysClock                                 ; -7.238 ; -43.143       ;
-; ClockIn                                  ; -6.880 ; -32.790       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -6.756 ; -63.234       ;
-; IR:IR|Q[0]                               ; -6.645 ; -16.911       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -6.050 ; -23.472       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; -5.588 ; -22.171       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; -4.822 ; -19.240       ;
-; OnOffToggle:DivideX2|state               ; -0.066 ; -0.132        ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                      ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; SysClock                                       ; -6.788 ; -49.814       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -6.591 ; -80.110       ;
+; ClockIn                                        ; -6.058 ; -29.011       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -5.958 ; -22.784       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -5.507 ; -21.258       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -2.955 ; -10.812       ;
+; IR:InstructionReg|Q[0]                         ; -2.642 ; -22.128       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -1.597 ; -6.093        ;
+; OnOffToggle:DivideX2|state                     ; -0.064 ; -0.122        ;
++------------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                 ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -0.019 ; -0.019        ;
-; IR:IR|Q[0]                               ; -0.004 ; -0.004        ;
-; OnOffToggle:DivideX2|state               ; 0.312  ; 0.000         ;
-; SysClock                                 ; 0.882  ; 0.000         ;
-; ClockIn                                  ; 1.536  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; 1.707  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 3.834  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 4.653  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                      ;
++------------------------------------------------+-------+---------------+
+; Clock                                          ; Slack ; End Point TNS ;
++------------------------------------------------+-------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 0.264 ; 0.000         ;
+; OnOffToggle:DivideX2|state                     ; 0.313 ; 0.000         ;
+; IR:InstructionReg|Q[0]                         ; 0.516 ; 0.000         ;
+; SysClock                                       ; 0.719 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 1.026 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 1.110 ; 0.000         ;
+; ClockIn                                        ; 1.227 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 1.506 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 4.407 ; 0.000         ;
++------------------------------------------------+-------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 0C Model Recovery Summary                             ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -2.791 ; -10.756       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -2.624 ; -10.496       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; -1.500 ; -5.618        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; -0.876 ; -2.770        ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary                                   ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -2.367 ; -9.435        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -2.015 ; -6.877        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -1.840 ; -7.194        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -1.349 ; -5.226        ;
++------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------+
-; Slow 1200mV 0C Model Removal Summary                             ;
-+------------------------------------------+-------+---------------+
-; Clock                                    ; Slack ; End Point TNS ;
-+------------------------------------------+-------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.141 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 1.013 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; 1.182 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; 1.697 ; 0.000         ;
-+------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal Summary                                   ;
++------------------------------------------------+-------+---------------+
+; Clock                                          ; Slack ; End Point TNS ;
++------------------------------------------------+-------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.841 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 1.161 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 1.486 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1.741 ; 0.000         ;
++------------------------------------------------+-------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary                  ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; SysClock                                 ; -3.000 ; -58.126       ;
-; ClockIn                                  ; -3.000 ; -30.066       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -1.403 ; -11.224       ;
-; OnOffToggle:DivideX2|state               ; -1.403 ; -5.612        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -1.403 ; -5.612        ;
-; IR:IR|Q[0]                               ; 0.318  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.430  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0.465  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                        ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; SysClock                                       ; -3.000 ; -58.126       ;
+; ClockIn                                        ; -3.000 ; -30.066       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -1.403 ; -11.224       ;
+; OnOffToggle:DivideX2|state                     ; -1.403 ; -5.612        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -1.403 ; -5.612        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -1.403 ; -5.612        ;
+; IR:InstructionReg|Q[0]                         ; 0.288  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.428  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0.462  ; 0.000         ;
++------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -305,76 +314,79 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                                ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -3.666 ; -30.374       ;
-; SysClock                                 ; -3.377 ; -13.108       ;
-; IR:IR|Q[0]                               ; -3.133 ; -6.104        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -3.130 ; -12.189       ;
-; ClockIn                                  ; -3.037 ; -9.946        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; -2.592 ; -10.320       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; -2.118 ; -8.385        ;
-; OnOffToggle:DivideX2|state               ; 0.500  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                      ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -3.564 ; -29.908       ;
+; SysClock                                       ; -3.057 ; -16.849       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -2.877 ; -11.155       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -2.726 ; -10.361       ;
+; ClockIn                                        ; -2.628 ; -7.881        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -1.196 ; -4.295        ;
+; IR:InstructionReg|Q[0]                         ; -1.027 ; -1.952        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -0.366 ; -1.276        ;
+; OnOffToggle:DivideX2|state                     ; 0.500  ; 0.000         ;
++------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                ;
-+------------------------------------------+-------+---------------+
-; Clock                                    ; Slack ; End Point TNS ;
-+------------------------------------------+-------+---------------+
-; OnOffToggle:DivideX2|state               ; 0.152 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0.328 ; 0.000         ;
-; IR:IR|Q[0]                               ; 0.380 ; 0.000         ;
-; SysClock                                 ; 0.514 ; 0.000         ;
-; ClockIn                                  ; 0.581 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0.773 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 2.003 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 2.503 ; 0.000         ;
-+------------------------------------------+-------+---------------+
++-------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                       ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; IR:InstructionReg|Q[0]                         ; -0.098 ; -0.559        ;
+; OnOffToggle:DivideX2|state                     ; 0.152  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 0.195  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 0.287  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 0.493  ; 0.000         ;
+; ClockIn                                        ; 0.511  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.598  ; 0.000         ;
+; SysClock                                       ; 0.730  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 2.386  ; 0.000         ;
++------------------------------------------------+--------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Fast 1200mV 0C Model Recovery Summary                             ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -1.313 ; -4.961        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -1.246 ; -4.984        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; -0.307 ; -1.081        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.105  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary                                   ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -0.844 ; -3.276        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -0.440 ; -1.739        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -0.333 ; -0.760        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.016  ; 0.000         ;
++------------------------------------------------+--------+---------------+
 
 
-+------------------------------------------------------------------+
-; Fast 1200mV 0C Model Removal Summary                             ;
-+------------------------------------------+-------+---------------+
-; Clock                                    ; Slack ; End Point TNS ;
-+------------------------------------------+-------+---------------+
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.042 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0.365 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0.572 ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0.586 ; 0.000         ;
-+------------------------------------------+-------+---------------+
++------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal Summary                                   ;
++------------------------------------------------+-------+---------------+
+; Clock                                          ; Slack ; End Point TNS ;
++------------------------------------------------+-------+---------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.221 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0.419 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 0.438 ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 0.584 ; 0.000         ;
++------------------------------------------------+-------+---------------+
 
 
-+-------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary                  ;
-+------------------------------------------+--------+---------------+
-; Clock                                    ; Slack  ; End Point TNS ;
-+------------------------------------------+--------+---------------+
-; SysClock                                 ; -3.000 ; -41.886       ;
-; ClockIn                                  ; -3.000 ; -19.103       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; -1.000 ; -8.000        ;
-; OnOffToggle:DivideX2|state               ; -1.000 ; -4.000        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; -1.000 ; -4.000        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0.324  ; 0.000         ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0.401  ; 0.000         ;
-; IR:IR|Q[0]                               ; 0.435  ; 0.000         ;
-+------------------------------------------+--------+---------------+
++-------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                        ;
++------------------------------------------------+--------+---------------+
+; Clock                                          ; Slack  ; End Point TNS ;
++------------------------------------------------+--------+---------------+
+; SysClock                                       ; -3.000 ; -40.626       ;
+; ClockIn                                        ; -3.000 ; -19.027       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -1.000 ; -8.000        ;
+; OnOffToggle:DivideX2|state                     ; -1.000 ; -4.000        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -1.000 ; -4.000        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -1.000 ; -4.000        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0.359  ; 0.000         ;
+; IR:InstructionReg|Q[0]                         ; 0.387  ; 0.000         ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0.397  ; 0.000         ;
++------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -383,30 +395,32 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                      ;
-+-------------------------------------------+----------+--------+----------+---------+---------------------+
-; Clock                                     ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------------------+----------+--------+----------+---------+---------------------+
-; Worst-case Slack                          ; -7.840   ; -0.121 ; -3.052   ; 0.042   ; -3.000              ;
-;  ClockIn                                  ; -7.386   ; 0.581  ; N/A      ; N/A     ; -3.000              ;
-;  IR:IR|Q[0]                               ; -7.097   ; -0.116 ; N/A      ; N/A     ; 0.318               ;
-;  OnOffToggle:DivideX2|state               ; -0.167   ; 0.152  ; N/A      ; N/A     ; -1.403              ;
-;  SysClock                                 ; -7.840   ; 0.514  ; N/A      ; N/A     ; -3.000              ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.E ; -7.481   ; -0.121 ; -3.052   ; 0.572   ; -1.403              ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.F ; -6.708   ; 0.773  ; -2.879   ; 0.365   ; -1.403              ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.H ; -6.175   ; 2.503  ; -1.636   ; 0.586   ; 0.401               ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.L ; -5.303   ; 2.003  ; -0.949   ; 0.042   ; 0.324               ;
-; Design-wide TNS                           ; -244.211 ; -0.237 ; -32.435  ; 0.0     ; -112.598            ;
-;  ClockIn                                  ; -35.797  ; 0.000  ; N/A      ; N/A     ; -31.045             ;
-;  IR:IR|Q[0]                               ; -17.714  ; -0.116 ; N/A      ; N/A     ; 0.000               ;
-;  OnOffToggle:DivideX2|state               ; -0.334   ; 0.000  ; N/A      ; N/A     ; -5.612              ;
-;  SysClock                                 ; -49.329  ; 0.000  ; N/A      ; N/A     ; -59.105             ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.E ; -69.336  ; -0.121 ; -11.749  ; 0.000   ; -11.224             ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.F ; -26.022  ; 0.000  ; -11.516  ; 0.000   ; -5.612              ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.H ; -24.522  ; 0.000  ; -6.161   ; 0.000   ; 0.000               ;
-;  triscPCU:comb_30|triscFSM:comb_4|state.L ; -21.157  ; 0.000  ; -3.009   ; 0.000   ; 0.000               ;
-+-------------------------------------------+----------+--------+----------+---------+---------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                            ;
++-------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                           ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                ; -7.347   ; -0.098 ; -2.531   ; 0.221   ; -3.000              ;
+;  ClockIn                                        ; -6.542   ; 0.511  ; N/A      ; N/A     ; -3.000              ;
+;  IR:InstructionReg|Q[0]                         ; -2.746   ; -0.098 ; N/A      ; N/A     ; 0.288               ;
+;  OnOffToggle:DivideX2|state                     ; -0.166   ; 0.152  ; N/A      ; N/A     ; -1.403              ;
+;  SysClock                                       ; -7.347   ; 0.719  ; N/A      ; N/A     ; -3.000              ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -7.289   ; 0.195  ; -2.221   ; 0.584   ; -1.403              ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -3.327   ; 0.493  ; -2.531   ; 0.438   ; -1.403              ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -6.540   ; 2.386  ; -2.057   ; 0.419   ; 0.397               ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -1.694   ; 0.598  ; -1.349   ; 0.221   ; 0.359               ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -6.101   ; 0.287  ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS                                 ; -265.563 ; -0.559 ; -30.866  ; 0.0     ; -118.21             ;
+;  ClockIn                                        ; -31.786  ; 0.000  ; N/A      ; N/A     ; -31.045             ;
+;  IR:InstructionReg|Q[0]                         ; -22.147  ; -0.559 ; N/A      ; N/A     ; 0.000               ;
+;  OnOffToggle:DivideX2|state                     ; -0.324   ; 0.000  ; N/A      ; N/A     ; -5.612              ;
+;  SysClock                                       ; -58.167  ; 0.000  ; N/A      ; N/A     ; -59.105             ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; -85.819  ; 0.000  ; -8.690   ; 0.000   ; -11.224             ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; -12.243  ; 0.000  ; -10.071  ; 0.000   ; -5.612              ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; -25.107  ; 0.000  ; -6.962   ; 0.000   ; 0.000               ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; -6.429   ; 0.000  ; -5.226   ; 0.000   ; 0.000               ;
+;  triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; -23.541  ; 0.000  ; N/A      ; N/A     ; -5.612              ;
++-------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -443,7 +457,6 @@ No synchronizer chains to report.
 ; MDOut[12]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDOut[13]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDOut[14]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; MDOut[15]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDIn[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDIn[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDIn[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -459,7 +472,10 @@ No synchronizer chains to report.
 ; MDIn[12]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDIn[13]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; MDIn[14]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; MDIn[15]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; IRout[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; IRout[1]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; IRout[2]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; IRout[3]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; C[14]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; C[13]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; C[12]        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -495,8 +511,8 @@ No synchronizer chains to report.
 ; DataIn[7]           ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; SysClock            ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; Start               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; RW                  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ClearAddGen         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; RW                  ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ClockIn             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -534,7 +550,7 @@ No synchronizer chains to report.
 ; MDOut[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; MDOut[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; MDOut[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.33 V              ; -0.00603 V          ; 0.237 V                              ; 0.191 V                              ; 3.94e-09 s                  ; 3.71e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.33 V             ; -0.00603 V         ; 0.237 V                             ; 0.191 V                             ; 3.94e-09 s                 ; 3.71e-09 s                 ; No                        ; Yes                       ;
 ; MDOut[8]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -542,7 +558,6 @@ No synchronizer chains to report.
 ; MDOut[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; MDOut[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -550,7 +565,7 @@ No synchronizer chains to report.
 ; MDIn[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; MDIn[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; MDIn[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -558,7 +573,10 @@ No synchronizer chains to report.
 ; MDIn[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; MDIn[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; IRout[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; IRout[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; IRout[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; IRout[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; C[14]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; C[13]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; C[12]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -604,7 +622,7 @@ No synchronizer chains to report.
 ; MDOut[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; MDOut[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; MDOut[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; MDOut[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; MDOut[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.33 V              ; -0.00314 V          ; 0.21 V                               ; 0.115 V                              ; 4.79e-09 s                  ; 4.41e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.33 V             ; -0.00314 V         ; 0.21 V                              ; 0.115 V                             ; 4.79e-09 s                 ; 4.41e-09 s                 ; No                        ; Yes                       ;
 ; MDOut[8]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDOut[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDOut[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -612,7 +630,6 @@ No synchronizer chains to report.
 ; MDOut[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDOut[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; MDOut[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; MDOut[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; MDIn[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -620,7 +637,7 @@ No synchronizer chains to report.
 ; MDIn[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; MDIn[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; MDIn[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
 ; MDIn[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -628,7 +645,10 @@ No synchronizer chains to report.
 ; MDIn[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; MDIn[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; MDIn[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; MDIn[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; IRout[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; IRout[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; IRout[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; IRout[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; C[14]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; C[13]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; C[12]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
@@ -674,7 +694,7 @@ No synchronizer chains to report.
 ; MDOut[4]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[5]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[6]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; MDOut[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; MDOut[7]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.64 V              ; -0.00888 V          ; 0.249 V                              ; 0.203 V                              ; 3.12e-09 s                  ; 3.02e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.64 V             ; -0.00888 V         ; 0.249 V                             ; 0.203 V                             ; 3.12e-09 s                 ; 3.02e-09 s                 ; No                        ; Yes                       ;
 ; MDOut[8]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[9]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[10]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -682,7 +702,6 @@ No synchronizer chains to report.
 ; MDOut[12]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[13]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDOut[14]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; MDOut[15]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -690,7 +709,7 @@ No synchronizer chains to report.
 ; MDIn[4]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[5]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[6]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; MDIn[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; MDIn[7]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[8]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[9]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[10]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -698,7 +717,10 @@ No synchronizer chains to report.
 ; MDIn[12]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[13]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; MDIn[14]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; MDIn[15]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; IRout[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; IRout[1]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; IRout[2]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; IRout[3]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; C[14]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; C[13]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; C[12]        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -718,119 +740,135 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                 ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; ClockIn                                  ; ClockIn                                  ; 0        ; 0        ; 0        ; 20       ;
-; OnOffToggle:DivideX2|state               ; ClockIn                                  ; 0        ; 0        ; 1        ; 5        ;
-; SysClock                                 ; ClockIn                                  ; 0        ; 0        ; 0        ; 54       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; ClockIn                                  ; 0        ; 0        ; 12       ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; ClockIn                                  ; 0        ; 0        ; 4        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; ClockIn                                  ; 0        ; 0        ; 4        ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; ClockIn                                  ; 0        ; 0        ; 4        ; 8        ;
-; SysClock                                 ; IR:IR|Q[0]                               ; 0        ; 17       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; IR:IR|Q[0]                               ; 1        ; 1        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; IR:IR|Q[0]                               ; 1        ; 1        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; IR:IR|Q[0]                               ; 1        ; 1        ; 0        ; 0        ;
-; OnOffToggle:DivideX2|state               ; OnOffToggle:DivideX2|state               ; 0        ; 0        ; 0        ; 10       ;
-; ClockIn                                  ; SysClock                                 ; 0        ; 0        ; 0        ; 20       ;
-; IR:IR|Q[0]                               ; SysClock                                 ; 0        ; 0        ; 14       ; 0        ;
-; OnOffToggle:DivideX2|state               ; SysClock                                 ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; SysClock                                 ; 0        ; 0        ; 0        ; 54       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; SysClock                                 ; 0        ; 0        ; 26       ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; SysClock                                 ; 0        ; 0        ; 4        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; SysClock                                 ; 0        ; 0        ; 4        ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; SysClock                                 ; 0        ; 0        ; 4        ; 8        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0        ; 14       ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0        ; 41       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 10       ; 0        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 11       ; 25       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0        ; 10       ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0        ; 20       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 10       ; 24       ; 0        ; 0        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0        ; 0        ; 0        ; 4        ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                             ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                     ; To Clock                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; ClockIn                                        ; ClockIn                                        ; 0        ; 0        ; 0        ; 16       ;
+; OnOffToggle:DivideX2|state                     ; ClockIn                                        ; 0        ; 0        ; 1        ; 5        ;
+; SysClock                                       ; ClockIn                                        ; 0        ; 0        ; 28       ; 16       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; ClockIn                                        ; 0        ; 0        ; 10       ; 6        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; ClockIn                                        ; 0        ; 0        ; 4        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; ClockIn                                        ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; ClockIn                                        ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; ClockIn                                        ; 0        ; 0        ; 4        ; 0        ;
+; SysClock                                       ; IR:InstructionReg|Q[0]                         ; 16       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; OnOffToggle:DivideX2|state                     ; OnOffToggle:DivideX2|state                     ; 0        ; 0        ; 0        ; 10       ;
+; ClockIn                                        ; SysClock                                       ; 0        ; 0        ; 0        ; 16       ;
+; IR:InstructionReg|Q[0]                         ; SysClock                                       ; 14       ; 0        ; 0        ; 0        ;
+; OnOffToggle:DivideX2|state                     ; SysClock                                       ; 0        ; 0        ; 0        ; 4        ;
+; SysClock                                       ; SysClock                                       ; 0        ; 0        ; 28       ; 16       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; SysClock                                       ; 14       ; 0        ; 10       ; 6        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; SysClock                                       ; 0        ; 0        ; 4        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; SysClock                                       ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; SysClock                                       ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; SysClock                                       ; 0        ; 0        ; 4        ; 0        ;
+; ClockIn                                        ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 0        ; 14       ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 26       ; 14       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 11       ; 25       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 24       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
+; ClockIn                                        ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0        ; 0        ; 4        ; 0        ;
+; ClockIn                                        ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 0        ; 10       ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 10       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 20       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 0        ; 0        ; 0        ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                  ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; ClockIn                                  ; ClockIn                                  ; 0        ; 0        ; 0        ; 20       ;
-; OnOffToggle:DivideX2|state               ; ClockIn                                  ; 0        ; 0        ; 1        ; 5        ;
-; SysClock                                 ; ClockIn                                  ; 0        ; 0        ; 0        ; 54       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; ClockIn                                  ; 0        ; 0        ; 12       ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; ClockIn                                  ; 0        ; 0        ; 4        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; ClockIn                                  ; 0        ; 0        ; 4        ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; ClockIn                                  ; 0        ; 0        ; 4        ; 8        ;
-; SysClock                                 ; IR:IR|Q[0]                               ; 0        ; 17       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; IR:IR|Q[0]                               ; 1        ; 1        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; IR:IR|Q[0]                               ; 1        ; 1        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; IR:IR|Q[0]                               ; 1        ; 1        ; 0        ; 0        ;
-; OnOffToggle:DivideX2|state               ; OnOffToggle:DivideX2|state               ; 0        ; 0        ; 0        ; 10       ;
-; ClockIn                                  ; SysClock                                 ; 0        ; 0        ; 0        ; 20       ;
-; IR:IR|Q[0]                               ; SysClock                                 ; 0        ; 0        ; 14       ; 0        ;
-; OnOffToggle:DivideX2|state               ; SysClock                                 ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; SysClock                                 ; 0        ; 0        ; 0        ; 54       ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; SysClock                                 ; 0        ; 0        ; 26       ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; SysClock                                 ; 0        ; 0        ; 4        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; SysClock                                 ; 0        ; 0        ; 4        ; 8        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; SysClock                                 ; 0        ; 0        ; 4        ; 8        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0        ; 14       ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0        ; 41       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 10       ; 0        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 11       ; 25       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0        ; 10       ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0        ; 20       ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 10       ; 24       ; 0        ; 0        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
-; ClockIn                                  ; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0        ; 0        ; 0        ; 4        ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                              ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                     ; To Clock                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; ClockIn                                        ; ClockIn                                        ; 0        ; 0        ; 0        ; 16       ;
+; OnOffToggle:DivideX2|state                     ; ClockIn                                        ; 0        ; 0        ; 1        ; 5        ;
+; SysClock                                       ; ClockIn                                        ; 0        ; 0        ; 28       ; 16       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; ClockIn                                        ; 0        ; 0        ; 10       ; 6        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; ClockIn                                        ; 0        ; 0        ; 4        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; ClockIn                                        ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; ClockIn                                        ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; ClockIn                                        ; 0        ; 0        ; 4        ; 0        ;
+; SysClock                                       ; IR:InstructionReg|Q[0]                         ; 16       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; IR:InstructionReg|Q[0]                         ; 1        ; 1        ; 0        ; 0        ;
+; OnOffToggle:DivideX2|state                     ; OnOffToggle:DivideX2|state                     ; 0        ; 0        ; 0        ; 10       ;
+; ClockIn                                        ; SysClock                                       ; 0        ; 0        ; 0        ; 16       ;
+; IR:InstructionReg|Q[0]                         ; SysClock                                       ; 14       ; 0        ; 0        ; 0        ;
+; OnOffToggle:DivideX2|state                     ; SysClock                                       ; 0        ; 0        ; 0        ; 4        ;
+; SysClock                                       ; SysClock                                       ; 0        ; 0        ; 28       ; 16       ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; SysClock                                       ; 14       ; 0        ; 10       ; 6        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; SysClock                                       ; 0        ; 0        ; 4        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; SysClock                                       ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; SysClock                                       ; 0        ; 0        ; 4        ; 8        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; SysClock                                       ; 0        ; 0        ; 4        ; 0        ;
+; ClockIn                                        ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 0        ; 14       ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 26       ; 14       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 11       ; 25       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 1        ; 1        ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 24       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 10       ; 0        ; 0        ; 0        ;
+; ClockIn                                        ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0        ; 0        ; 4        ; 0        ;
+; ClockIn                                        ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 0        ; 10       ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 10       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 20       ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; 10       ; 0        ; 0        ; 0        ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Recovery Transfers                                                                                                              ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0        ; 4        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 4        ; 4        ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0        ; 4        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 4        ; 4        ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0        ; 0        ; 0        ; 4        ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                                          ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                     ; To Clock                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 4        ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 4        ; 4        ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 4        ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 4        ; 4        ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0        ; 0        ; 4        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0        ; 0        ; 4        ; 0        ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removal Transfers                                                                                                               ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 0        ; 4        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; triscPCU:comb_30|triscFSM:comb_4|state.E ; 4        ; 4        ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 0        ; 4        ; 0        ; 0        ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.F ; 4        ; 4        ; 0        ; 0        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.H ; 0        ; 0        ; 0        ; 4        ;
-; SysClock                                 ; triscPCU:comb_30|triscFSM:comb_4|state.L ; 0        ; 0        ; 0        ; 4        ;
-+------------------------------------------+------------------------------------------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                                           ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                     ; To Clock                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 4        ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; 4        ; 4        ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 4        ; 0        ; 0        ; 0        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; 4        ; 4        ; 0        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; 0        ; 0        ; 4        ; 0        ;
+; SysClock                                       ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; 0        ; 0        ; 4        ; 0        ;
++------------------------------------------------+------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -854,26 +892,27 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 12    ; 12   ;
-; Unconstrained Input Port Paths  ; 118   ; 118  ;
-; Unconstrained Output Ports      ; 54    ; 54   ;
-; Unconstrained Output Port Paths ; 534   ; 534  ;
+; Unconstrained Input Port Paths  ; 122   ; 122  ;
+; Unconstrained Output Ports      ; 58    ; 58   ;
+; Unconstrained Output Port Paths ; 510   ; 510  ;
 +---------------------------------+-------+------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                     ;
-+------------------------------------------+------------------------------------------+------+-------------+
-; Target                                   ; Clock                                    ; Type ; Status      ;
-+------------------------------------------+------------------------------------------+------+-------------+
-; ClockIn                                  ; ClockIn                                  ; Base ; Constrained ;
-; IR:IR|Q[0]                               ; IR:IR|Q[0]                               ; Base ; Constrained ;
-; OnOffToggle:DivideX2|state               ; OnOffToggle:DivideX2|state               ; Base ; Constrained ;
-; SysClock                                 ; SysClock                                 ; Base ; Constrained ;
-; triscPCU:comb_30|triscFSM:comb_4|state.E ; triscPCU:comb_30|triscFSM:comb_4|state.E ; Base ; Constrained ;
-; triscPCU:comb_30|triscFSM:comb_4|state.F ; triscPCU:comb_30|triscFSM:comb_4|state.F ; Base ; Constrained ;
-; triscPCU:comb_30|triscFSM:comb_4|state.H ; triscPCU:comb_30|triscFSM:comb_4|state.H ; Base ; Constrained ;
-; triscPCU:comb_30|triscFSM:comb_4|state.L ; triscPCU:comb_30|triscFSM:comb_4|state.L ; Base ; Constrained ;
-+------------------------------------------+------------------------------------------+------+-------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                 ;
++------------------------------------------------+------------------------------------------------+------+-------------+
+; Target                                         ; Clock                                          ; Type ; Status      ;
++------------------------------------------------+------------------------------------------------+------+-------------+
+; ClockIn                                        ; ClockIn                                        ; Base ; Constrained ;
+; IR:InstructionReg|Q[0]                         ; IR:InstructionReg|Q[0]                         ; Base ; Constrained ;
+; OnOffToggle:DivideX2|state                     ; OnOffToggle:DivideX2|state                     ; Base ; Constrained ;
+; SysClock                                       ; SysClock                                       ; Base ; Constrained ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.E ; Base ; Constrained ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.F ; Base ; Constrained ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.H ; Base ; Constrained ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.L ; Base ; Constrained ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; triscPCU:triscPCU_inst|triscFSM:comb_4|state.U ; Base ; Constrained ;
++------------------------------------------------+------------------------------------------------+------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -913,6 +952,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; C[10]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; C[11]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; C[14]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MAR[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MAR[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MAR[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -995,6 +1038,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; C[10]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; C[11]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; C[14]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[0]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[1]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[2]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; IRout[3]    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MAR[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MAR[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MAR[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1046,7 +1093,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 04 14:48:50 2021
+    Info: Processing started: Sun Dec 05 17:09:47 2021
 Info: Command: quartus_sta trisc -c trisc
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1058,12 +1105,13 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'tri
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name ClockIn ClockIn
+    Info (332105): create_clock -period 1.000 -name triscPCU:triscPCU_inst|triscFSM:comb_4|state.U triscPCU:triscPCU_inst|triscFSM:comb_4|state.U
     Info (332105): create_clock -period 1.000 -name SysClock SysClock
-    Info (332105): create_clock -period 1.000 -name IR:IR|Q[0] IR:IR|Q[0]
-    Info (332105): create_clock -period 1.000 -name triscPCU:comb_30|triscFSM:comb_4|state.L triscPCU:comb_30|triscFSM:comb_4|state.L
-    Info (332105): create_clock -period 1.000 -name triscPCU:comb_30|triscFSM:comb_4|state.E triscPCU:comb_30|triscFSM:comb_4|state.E
-    Info (332105): create_clock -period 1.000 -name triscPCU:comb_30|triscFSM:comb_4|state.F triscPCU:comb_30|triscFSM:comb_4|state.F
-    Info (332105): create_clock -period 1.000 -name triscPCU:comb_30|triscFSM:comb_4|state.H triscPCU:comb_30|triscFSM:comb_4|state.H
+    Info (332105): create_clock -period 1.000 -name IR:InstructionReg|Q[0] IR:InstructionReg|Q[0]
+    Info (332105): create_clock -period 1.000 -name triscPCU:triscPCU_inst|triscFSM:comb_4|state.L triscPCU:triscPCU_inst|triscFSM:comb_4|state.L
+    Info (332105): create_clock -period 1.000 -name triscPCU:triscPCU_inst|triscFSM:comb_4|state.E triscPCU:triscPCU_inst|triscFSM:comb_4|state.E
+    Info (332105): create_clock -period 1.000 -name triscPCU:triscPCU_inst|triscFSM:comb_4|state.F triscPCU:triscPCU_inst|triscFSM:comb_4|state.F
+    Info (332105): create_clock -period 1.000 -name triscPCU:triscPCU_inst|triscFSM:comb_4|state.H triscPCU:triscPCU_inst|triscFSM:comb_4|state.H
     Info (332105): create_clock -period 1.000 -name OnOffToggle:DivideX2|state OnOffToggle:DivideX2|state
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -1071,161 +1119,170 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -7.840
+Info (332146): Worst-case setup slack is -7.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.840             -49.329 SysClock 
-    Info (332119):    -7.481             -69.336 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -7.386             -35.797 ClockIn 
-    Info (332119):    -7.097             -17.714 IR:IR|Q[0] 
-    Info (332119):    -6.708             -26.022 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):    -6.175             -24.522 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):    -5.303             -21.157 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):    -0.167              -0.334 OnOffToggle:DivideX2|state 
-Info (332146): Worst-case hold slack is -0.121
+    Info (332119):    -7.347             -58.167 SysClock 
+    Info (332119):    -7.289             -85.819 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):    -6.542             -31.786 ClockIn 
+    Info (332119):    -6.540             -25.107 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):    -6.101             -23.541 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):    -3.327             -12.243 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -2.746             -22.147 IR:InstructionReg|Q[0] 
+    Info (332119):    -1.694              -6.429 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):    -0.166              -0.324 OnOffToggle:DivideX2|state 
+Info (332146): Worst-case hold slack is 0.336
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.121              -0.121 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -0.116              -0.116 IR:IR|Q[0] 
-    Info (332119):     0.347               0.000 OnOffToggle:DivideX2|state 
-    Info (332119):     0.994               0.000 SysClock 
-    Info (332119):     1.637               0.000 ClockIn 
-    Info (332119):     1.874               0.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     4.161               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     5.040               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
-Info (332146): Worst-case recovery slack is -3.052
+    Info (332119):     0.336               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):     0.348               0.000 OnOffToggle:DivideX2|state 
+    Info (332119):     0.353               0.000 IR:InstructionReg|Q[0] 
+    Info (332119):     0.977               0.000 SysClock 
+    Info (332119):     0.979               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     1.271               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):     1.323               0.000 ClockIn 
+    Info (332119):     1.648               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):     4.785               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+Info (332146): Worst-case recovery slack is -2.531
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.052             -11.749 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -2.879             -11.516 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):    -1.636              -6.161 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):    -0.949              -3.009 triscPCU:comb_30|triscFSM:comb_4|state.L 
-Info (332146): Worst-case removal slack is 0.045
+    Info (332119):    -2.531             -10.071 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -2.221              -8.690 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):    -2.057              -6.962 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):    -1.337              -5.143 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+Info (332146): Worst-case removal slack is 0.666
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.045               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     1.024               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):     1.202               0.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     1.760               0.000 triscPCU:comb_30|triscFSM:comb_4|state.E 
+    Info (332119):     0.666               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     1.050               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):     1.546               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):     1.856               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -59.105 SysClock 
     Info (332119):    -3.000             -31.045 ClockIn 
-    Info (332119):    -1.403             -11.224 triscPCU:comb_30|triscFSM:comb_4|state.E 
+    Info (332119):    -1.403             -11.224 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
     Info (332119):    -1.403              -5.612 OnOffToggle:DivideX2|state 
-    Info (332119):    -1.403              -5.612 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     0.334               0.000 IR:IR|Q[0] 
-    Info (332119):     0.352               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     0.423               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
+    Info (332119):    -1.403              -5.612 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -1.403              -5.612 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):     0.310               0.000 IR:InstructionReg|Q[0] 
+    Info (332119):     0.414               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):     0.431               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -7.238
+Info (332146): Worst-case setup slack is -6.788
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.238             -43.143 SysClock 
-    Info (332119):    -6.880             -32.790 ClockIn 
-    Info (332119):    -6.756             -63.234 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -6.645             -16.911 IR:IR|Q[0] 
-    Info (332119):    -6.050             -23.472 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):    -5.588             -22.171 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):    -4.822             -19.240 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):    -0.066              -0.132 OnOffToggle:DivideX2|state 
-Info (332146): Worst-case hold slack is -0.019
+    Info (332119):    -6.788             -49.814 SysClock 
+    Info (332119):    -6.591             -80.110 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):    -6.058             -29.011 ClockIn 
+    Info (332119):    -5.958             -22.784 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):    -5.507             -21.258 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):    -2.955             -10.812 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -2.642             -22.128 IR:InstructionReg|Q[0] 
+    Info (332119):    -1.597              -6.093 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):    -0.064              -0.122 OnOffToggle:DivideX2|state 
+Info (332146): Worst-case hold slack is 0.264
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.019              -0.019 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -0.004              -0.004 IR:IR|Q[0] 
-    Info (332119):     0.312               0.000 OnOffToggle:DivideX2|state 
-    Info (332119):     0.882               0.000 SysClock 
-    Info (332119):     1.536               0.000 ClockIn 
-    Info (332119):     1.707               0.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     3.834               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     4.653               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
-Info (332146): Worst-case recovery slack is -2.791
+    Info (332119):     0.264               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):     0.313               0.000 OnOffToggle:DivideX2|state 
+    Info (332119):     0.516               0.000 IR:InstructionReg|Q[0] 
+    Info (332119):     0.719               0.000 SysClock 
+    Info (332119):     1.026               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     1.110               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):     1.227               0.000 ClockIn 
+    Info (332119):     1.506               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):     4.407               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+Info (332146): Worst-case recovery slack is -2.367
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.791             -10.756 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -2.624             -10.496 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):    -1.500              -5.618 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):    -0.876              -2.770 triscPCU:comb_30|triscFSM:comb_4|state.L 
-Info (332146): Worst-case removal slack is 0.141
+    Info (332119):    -2.367              -9.435 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -2.015              -6.877 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):    -1.840              -7.194 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):    -1.349              -5.226 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+Info (332146): Worst-case removal slack is 0.841
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.141               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     1.013               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):     1.182               0.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     1.697               0.000 triscPCU:comb_30|triscFSM:comb_4|state.E 
+    Info (332119):     0.841               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     1.161               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):     1.486               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):     1.741               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000             -58.126 SysClock 
     Info (332119):    -3.000             -30.066 ClockIn 
-    Info (332119):    -1.403             -11.224 triscPCU:comb_30|triscFSM:comb_4|state.E 
+    Info (332119):    -1.403             -11.224 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
     Info (332119):    -1.403              -5.612 OnOffToggle:DivideX2|state 
-    Info (332119):    -1.403              -5.612 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     0.318               0.000 IR:IR|Q[0] 
-    Info (332119):     0.430               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     0.465               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
+    Info (332119):    -1.403              -5.612 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -1.403              -5.612 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):     0.288               0.000 IR:InstructionReg|Q[0] 
+    Info (332119):     0.428               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     0.462               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.666
+Info (332146): Worst-case setup slack is -3.564
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.666             -30.374 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -3.377             -13.108 SysClock 
-    Info (332119):    -3.133              -6.104 IR:IR|Q[0] 
-    Info (332119):    -3.130             -12.189 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):    -3.037              -9.946 ClockIn 
-    Info (332119):    -2.592             -10.320 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):    -2.118              -8.385 triscPCU:comb_30|triscFSM:comb_4|state.L 
+    Info (332119):    -3.564             -29.908 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):    -3.057             -16.849 SysClock 
+    Info (332119):    -2.877             -11.155 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):    -2.726             -10.361 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):    -2.628              -7.881 ClockIn 
+    Info (332119):    -1.196              -4.295 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -1.027              -1.952 IR:InstructionReg|Q[0] 
+    Info (332119):    -0.366              -1.276 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
     Info (332119):     0.500               0.000 OnOffToggle:DivideX2|state 
-Info (332146): Worst-case hold slack is 0.152
+Info (332146): Worst-case hold slack is -0.098
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):    -0.098              -0.559 IR:InstructionReg|Q[0] 
     Info (332119):     0.152               0.000 OnOffToggle:DivideX2|state 
-    Info (332119):     0.328               0.000 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):     0.380               0.000 IR:IR|Q[0] 
-    Info (332119):     0.514               0.000 SysClock 
-    Info (332119):     0.581               0.000 ClockIn 
-    Info (332119):     0.773               0.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     2.003               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     2.503               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
-Info (332146): Worst-case recovery slack is -1.313
+    Info (332119):     0.195               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):     0.287               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):     0.493               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):     0.511               0.000 ClockIn 
+    Info (332119):     0.598               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     0.730               0.000 SysClock 
+    Info (332119):     2.386               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+Info (332146): Worst-case recovery slack is -0.844
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.313              -4.961 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):    -1.246              -4.984 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):    -0.307              -1.081 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):     0.105               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-Info (332146): Worst-case removal slack is 0.042
+    Info (332119):    -0.844              -3.276 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
+    Info (332119):    -0.440              -1.739 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -0.333              -0.760 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):     0.016               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+Info (332146): Worst-case removal slack is 0.221
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.042               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     0.365               0.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     0.572               0.000 triscPCU:comb_30|triscFSM:comb_4|state.E 
-    Info (332119):     0.586               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
+    Info (332119):     0.221               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     0.419               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
+    Info (332119):     0.438               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):     0.584               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -41.886 SysClock 
-    Info (332119):    -3.000             -19.103 ClockIn 
-    Info (332119):    -1.000              -8.000 triscPCU:comb_30|triscFSM:comb_4|state.E 
+    Info (332119):    -3.000             -40.626 SysClock 
+    Info (332119):    -3.000             -19.027 ClockIn 
+    Info (332119):    -1.000              -8.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.E 
     Info (332119):    -1.000              -4.000 OnOffToggle:DivideX2|state 
-    Info (332119):    -1.000              -4.000 triscPCU:comb_30|triscFSM:comb_4|state.F 
-    Info (332119):     0.324               0.000 triscPCU:comb_30|triscFSM:comb_4|state.L 
-    Info (332119):     0.401               0.000 triscPCU:comb_30|triscFSM:comb_4|state.H 
-    Info (332119):     0.435               0.000 IR:IR|Q[0] 
+    Info (332119):    -1.000              -4.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.F 
+    Info (332119):    -1.000              -4.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.U 
+    Info (332119):     0.359               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.L 
+    Info (332119):     0.387               0.000 IR:InstructionReg|Q[0] 
+    Info (332119):     0.397               0.000 triscPCU:triscPCU_inst|triscFSM:comb_4|state.H 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Sat Dec 04 14:48:55 2021
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Sun Dec 05 17:09:50 2021
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

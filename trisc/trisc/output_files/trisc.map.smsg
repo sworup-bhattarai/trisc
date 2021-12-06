@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at trisc.v(10): object "C" differs only in case from object "c" in the same scope File: D:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 10
+Warning (10268): Verilog HDL information at nbitbinary.v(10): always construct contains both blocking and non-blocking assignments File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v Line: 10

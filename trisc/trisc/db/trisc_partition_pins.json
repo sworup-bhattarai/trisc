@@ -172,6 +172,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "IRout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IRout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IRout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IRout[3]",
+					"strict" : false
+				},
+				{
 					"name" : "C[14]",
 					"strict" : false
 				},
@@ -264,11 +280,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "RW",
+					"name" : "ClearAddGen",
 					"strict" : false
 				},
 				{
-					"name" : "ClearAddGen",
+					"name" : "RW",
 					"strict" : false
 				},
 				{

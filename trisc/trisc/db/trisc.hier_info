@@ -1,5 +1,5 @@
 |trisc
-Start => Start.IN1
+Start => Start.IN3
 Mode => AddIn.OUTPUTSELECT
 Mode => AddIn.OUTPUTSELECT
 Mode => AddIn.OUTPUTSELECT
@@ -15,7 +15,8 @@ Mode => RAMdata.OUTPUTSELECT
 Mode => RAMdata.OUTPUTSELECT
 Mode => RAMwrite.OUTPUTSELECT
 ClockIn => ClockIn.IN1
-SysClock => SysClock.IN1
+SysClock => Mult0.IN0
+SysClock => _.IN1
 ClearAddGen => ClearAddGen.IN1
 RW => RAMwrite.DATAA
 DataIn[0] => RAMdata.DATAA
@@ -26,67 +27,354 @@ DataIn[4] => RAMdata.DATAA
 DataIn[5] => RAMdata.DATAA
 DataIn[6] => RAMdata.DATAA
 DataIn[7] => RAMdata.DATAA
-PC[0] << binary2seven:comb_41.port1
-PC[1] << binary2seven:comb_41.port1
-PC[2] << binary2seven:comb_41.port1
-PC[3] << binary2seven:comb_41.port1
-PC[4] << binary2seven:comb_41.port1
-PC[5] << binary2seven:comb_41.port1
-PC[6] << binary2seven:comb_41.port1
-MAR[0] << binary2seven:comb_42.port1
-MAR[1] << binary2seven:comb_42.port1
-MAR[2] << binary2seven:comb_42.port1
-MAR[3] << binary2seven:comb_42.port1
-MAR[4] << binary2seven:comb_42.port1
-MAR[5] << binary2seven:comb_42.port1
-MAR[6] << binary2seven:comb_42.port1
-MDOut[0] << binary2seven:comb_44.port1
-MDOut[1] << binary2seven:comb_44.port1
-MDOut[2] << binary2seven:comb_44.port1
-MDOut[3] << binary2seven:comb_44.port1
-MDOut[4] << binary2seven:comb_44.port1
-MDOut[5] << binary2seven:comb_44.port1
-MDOut[6] << binary2seven:comb_44.port1
+PC[0] << binary2seven:comb_51.port1
+PC[1] << binary2seven:comb_51.port1
+PC[2] << binary2seven:comb_51.port1
+PC[3] << binary2seven:comb_51.port1
+PC[4] << binary2seven:comb_51.port1
+PC[5] << binary2seven:comb_51.port1
+PC[6] << binary2seven:comb_51.port1
+MAR[0] << binary2seven:comb_52.port1
+MAR[1] << binary2seven:comb_52.port1
+MAR[2] << binary2seven:comb_52.port1
+MAR[3] << binary2seven:comb_52.port1
+MAR[4] << binary2seven:comb_52.port1
+MAR[5] << binary2seven:comb_52.port1
+MAR[6] << binary2seven:comb_52.port1
+MDOut[0] << binary2seven:comb_54.port1
+MDOut[1] << binary2seven:comb_54.port1
+MDOut[2] << binary2seven:comb_54.port1
+MDOut[3] << binary2seven:comb_54.port1
+MDOut[4] << binary2seven:comb_54.port1
+MDOut[5] << binary2seven:comb_54.port1
+MDOut[6] << binary2seven:comb_54.port1
 MDOut[7] << <GND>
-MDOut[8] << binary2seven:comb_43.port1
-MDOut[9] << binary2seven:comb_43.port1
-MDOut[10] << binary2seven:comb_43.port1
-MDOut[11] << binary2seven:comb_43.port1
-MDOut[12] << binary2seven:comb_43.port1
-MDOut[13] << binary2seven:comb_43.port1
-MDOut[14] << binary2seven:comb_43.port1
-MDOut[15] << <GND>
-MDIn[0] << binary2seven:comb_46.port1
-MDIn[1] << binary2seven:comb_46.port1
-MDIn[2] << binary2seven:comb_46.port1
-MDIn[3] << binary2seven:comb_46.port1
-MDIn[4] << binary2seven:comb_46.port1
-MDIn[5] << binary2seven:comb_46.port1
-MDIn[6] << binary2seven:comb_46.port1
+MDOut[8] << binary2seven:comb_53.port1
+MDOut[9] << binary2seven:comb_53.port1
+MDOut[10] << binary2seven:comb_53.port1
+MDOut[11] << binary2seven:comb_53.port1
+MDOut[12] << binary2seven:comb_53.port1
+MDOut[13] << binary2seven:comb_53.port1
+MDOut[14] << binary2seven:comb_53.port1
+MDIn[0] << binary2seven:comb_56.port1
+MDIn[1] << binary2seven:comb_56.port1
+MDIn[2] << binary2seven:comb_56.port1
+MDIn[3] << binary2seven:comb_56.port1
+MDIn[4] << binary2seven:comb_56.port1
+MDIn[5] << binary2seven:comb_56.port1
+MDIn[6] << binary2seven:comb_56.port1
 MDIn[7] << <GND>
-MDIn[8] << binary2seven:comb_45.port1
-MDIn[9] << binary2seven:comb_45.port1
-MDIn[10] << binary2seven:comb_45.port1
-MDIn[11] << binary2seven:comb_45.port1
-MDIn[12] << binary2seven:comb_45.port1
-MDIn[13] << binary2seven:comb_45.port1
-MDIn[14] << binary2seven:comb_45.port1
-MDIn[15] << <GND>
-C[14] << C[14].DB_MAX_OUTPUT_PORT_TYPE
+MDIn[8] << binary2seven:comb_55.port1
+MDIn[9] << binary2seven:comb_55.port1
+MDIn[10] << binary2seven:comb_55.port1
+MDIn[11] << binary2seven:comb_55.port1
+MDIn[12] << binary2seven:comb_55.port1
+MDIn[13] << binary2seven:comb_55.port1
+MDIn[14] << binary2seven:comb_55.port1
+IRout[0] << IRout[0].DB_MAX_OUTPUT_PORT_TYPE
+IRout[1] << IRout[1].DB_MAX_OUTPUT_PORT_TYPE
+IRout[2] << IRout[2].DB_MAX_OUTPUT_PORT_TYPE
+IRout[3] << IRout[3].DB_MAX_OUTPUT_PORT_TYPE
+C[14] << triscPCU:triscPCU_inst.C
 C[13] << C[13].DB_MAX_OUTPUT_PORT_TYPE
 C[12] << C[12].DB_MAX_OUTPUT_PORT_TYPE
-C[11] << triscPCU:comb_30.port3
-C[10] << C[10].DB_MAX_OUTPUT_PORT_TYPE
-C[9] << triscPCU:comb_30.port3
-C[8] << triscPCU:comb_30.port3
-C[7] << C[7].DB_MAX_OUTPUT_PORT_TYPE
-C[6] << triscPCU:comb_30.port3
-C[5] << triscPCU:comb_30.port3
-C[4] << triscPCU:comb_30.port3
-C[3] << triscPCU:comb_30.port3
-C[2] << triscPCU:comb_30.port3
-C[1] << triscPCU:comb_30.port3
-C[0] << triscPCU:comb_30.port3
+C[11] << triscPCU:triscPCU_inst.C
+C[10] << triscPCU:triscPCU_inst.C
+C[9] << triscPCU:triscPCU_inst.C
+C[8] << triscPCU:triscPCU_inst.C
+C[7] << triscPCU:triscPCU_inst.C
+C[6] << triscPCU:triscPCU_inst.C
+C[5] << triscPCU:triscPCU_inst.C
+C[4] << triscPCU:triscPCU_inst.C
+C[3] << triscPCU:triscPCU_inst.C
+C[2] << triscPCU:triscPCU_inst.C
+C[1] << triscPCU:triscPCU_inst.C
+C[0] << triscPCU:triscPCU_inst.C
+
+
+|trisc|IR:InstructionReg
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|triscPCU:triscPCU_inst
+sysclock => sysclock.IN1
+sysreset => sysreset.IN1
+Sw[3] => Sw[3].IN1
+Sw[2] => Sw[2].IN1
+Sw[1] => Sw[1].IN1
+Sw[0] => Sw[0].IN1
+C[14] <= triscFSM:comb_4.port26
+C[13] <= triscFSM:comb_4.port25
+C[12] <= triscFSM:comb_4.port24
+C[11] <= triscFSM:comb_4.port23
+C[10] <= triscFSM:comb_4.port22
+C[9] <= triscFSM:comb_4.port20
+C[8] <= triscFSM:comb_4.port19
+C[7] <= triscFSM:comb_4.port18
+C[6] <= <GND>
+C[5] <= triscFSM:comb_4.port21
+C[4] <= triscFSM:comb_4.port17
+C[3] <= triscFSM:comb_4.port16
+C[2] <= triscFSM:comb_4.port15
+C[1] <= triscFSM:comb_4.port14
+C[0] <= triscFSM:comb_4.port13
+
+
+|trisc|triscPCU:triscPCU_inst|fourtosixteen:comb_3
+S[3] => Decoder0.IN3
+S[2] => Decoder0.IN2
+S[1] => Decoder0.IN1
+S[0] => Decoder0.IN0
+Y[15] <= <GND>
+Y[14] <= <GND>
+Y[13] <= <GND>
+Y[12] <= <GND>
+Y[11] <= <GND>
+Y[10] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[9] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+Y[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|triscPCU:triscPCU_inst|triscFSM:comb_4
+SysClock => state~1.DATAIN
+StartStop => state~3.DATAIN
+LDA => nextstate.S.IN1
+LDA => nextstate.P.OUTPUTSELECT
+LDA => nextstate.M.OUTPUTSELECT
+LDA => nextstate.I.DATAA
+STA => nextstate.S.IN0
+STA => nextstate.M.DATAA
+STA => nextstate.P.DATAA
+ADD => nextstate.S.IN1
+SUB => ~NO_FANOUT~
+XOR => ~NO_FANOUT~
+INC => nextstate.S.IN1
+INC => nextstate.P.OUTPUTSELECT
+INC => nextstate.M.OUTPUTSELECT
+INC => nextstate.I.OUTPUTSELECT
+INC => nextstate.H.OUTPUTSELECT
+INC => nextstate.G.OUTPUTSELECT
+INC => nextstate.F.DATAA
+CLR => nextstate.S.IN1
+CLR => nextstate.P.OUTPUTSELECT
+CLR => nextstate.M.OUTPUTSELECT
+CLR => nextstate.I.OUTPUTSELECT
+CLR => nextstate.H.OUTPUTSELECT
+CLR => nextstate.G.DATAA
+JMP => nextstate.S.IN1
+JMP => nextstate.P.OUTPUTSELECT
+JMP => nextstate.M.OUTPUTSELECT
+JMP => nextstate.I.OUTPUTSELECT
+JMP => nextstate.H.DATAA
+JPZ => ~NO_FANOUT~
+JPN => ~NO_FANOUT~
+HLT => ~NO_FANOUT~
+C0 <= C0.DB_MAX_OUTPUT_PORT_TYPE
+C1 <= C1.DB_MAX_OUTPUT_PORT_TYPE
+C2 <= C7.DB_MAX_OUTPUT_PORT_TYPE
+C3 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+C4 <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+C7 <= C7.DB_MAX_OUTPUT_PORT_TYPE
+C8 <= C8.DB_MAX_OUTPUT_PORT_TYPE
+C9 <= C9.DB_MAX_OUTPUT_PORT_TYPE
+C5 <= C5.DB_MAX_OUTPUT_PORT_TYPE
+C10 <= C10.DB_MAX_OUTPUT_PORT_TYPE
+C11 <= C11.DB_MAX_OUTPUT_PORT_TYPE
+C12 <= <GND>
+C13 <= <GND>
+C14 <= C14.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|nbitbinary:ProgramCounter
+COUNT => y[0]~reg0.CLK
+COUNT => y[1]~reg0.CLK
+COUNT => y[2]~reg0.CLK
+COUNT => y[3]~reg0.CLK
+CLEAR => y[3].IN0
+CLEAR => y[0]~reg0.ACLR
+CLEAR => y[1]~reg0.ACLR
+CLEAR => y[2]~reg0.ACLR
+CLEAR => y[3]~reg0.ACLR
+LOAD => y[3].IN1
+in[0] => y[0]~reg0.ADATA
+in[1] => y[1]~reg0.ADATA
+in[2] => y[2]~reg0.ADATA
+in[3] => y[3]~reg0.ADATA
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|acc:acc_inst
+clear => clear.IN1
+load => load.IN1
+inc => inc.IN1
+AB => AB.IN1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Z[0] <= BinUp:RegCount.Q
+Z[1] <= BinUp:RegCount.Q
+Z[2] <= BinUp:RegCount.Q
+Z[3] <= BinUp:RegCount.Q
+
+
+|trisc|acc:acc_inst|two2one:two2oneMUX
+A[0] => Y.DATAA
+A[1] => Y.DATAA
+A[2] => Y.DATAA
+A[3] => Y.DATAA
+B[0] => Y.DATAB
+B[1] => Y.DATAB
+B[2] => Y.DATAB
+B[3] => Y.DATAB
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+S => Y.OUTPUTSELECT
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|acc:acc_inst|BinUp:RegCount
+inc => Q[0]~reg0.CLK
+inc => Q[1]~reg0.CLK
+inc => Q[2]~reg0.CLK
+inc => Q[3]~reg0.CLK
+clear => Q[3].IN0
+clear => Q[0]~reg0.ACLR
+clear => Q[1]~reg0.ACLR
+clear => Q[2]~reg0.ACLR
+clear => Q[3]~reg0.ACLR
+load => Q[3].IN1
+D[0] => Q[0]~reg0.ADATA
+D[1] => Q[1]~reg0.ADATA
+D[2] => Q[2]~reg0.ADATA
+D[3] => Q[3]~reg0.ADATA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|IR:BufferReg
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|alu:alu_inst
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+S[0] => S[0].IN1
+S[1] => Equal0.IN0
+S[1] => Equal1.IN1
+S[1] => Equal2.IN0
+S[1] => Equal3.IN0
+R[0] <= R[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= R[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= R[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+R[3] <= R[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|alu:alu_inst|AdderSubtractor:comb_3
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => comb.IN0
+B[1] => comb.IN0
+B[2] => comb.IN0
+B[3] => comb.IN0
+Cin => C[0].IN1
+S[0] <= fulladder:s0.port3
+S[1] <= fulladder:s1.port3
+S[2] <= fulladder:s2.port3
+S[3] <= fulladder:s3.port3
+Cout <= fulladder:s3.port4
+Ovr <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s0
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s1
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s2
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s3
+ai => Decoder0.IN0
+bi => Decoder0.IN1
+cini => Decoder0.IN2
+si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |trisc|OnOffToggle:DivideX2
@@ -253,292 +541,7 @@ wren_a => ram_block1a6.PORTAWE
 wren_a => ram_block1a7.PORTAWE
 
 
-|trisc|IR:IR
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-CLK => Q[0]~reg0.CLK
-CLK => Q[1]~reg0.CLK
-CLK => Q[2]~reg0.CLK
-CLK => Q[3]~reg0.CLK
-CLR => Q[0]~reg0.ACLR
-CLR => Q[1]~reg0.ACLR
-CLR => Q[2]~reg0.ACLR
-CLR => Q[3]~reg0.ACLR
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|triscPCU:comb_30
-sysclock => sysclock.IN1
-sysreset => sysreset.IN1
-Sw[3] => Sw[3].IN1
-Sw[2] => Sw[2].IN1
-Sw[1] => Sw[1].IN1
-Sw[0] => Sw[0].IN1
-C[14] <= triscFSM:comb_4.port26
-C[13] <= triscFSM:comb_4.port25
-C[12] <= triscFSM:comb_4.port24
-C[11] <= triscFSM:comb_4.port23
-C[10] <= triscFSM:comb_4.port22
-C[9] <= triscFSM:comb_4.port20
-C[8] <= triscFSM:comb_4.port19
-C[7] <= triscFSM:comb_4.port18
-C[6] <= <GND>
-C[5] <= triscFSM:comb_4.port21
-C[4] <= triscFSM:comb_4.port17
-C[3] <= triscFSM:comb_4.port16
-C[2] <= triscFSM:comb_4.port15
-C[1] <= triscFSM:comb_4.port14
-C[0] <= triscFSM:comb_4.port13
-
-
-|trisc|triscPCU:comb_30|fourtosixteen:comb_3
-S[3] => Decoder0.IN3
-S[2] => Decoder0.IN2
-S[1] => Decoder0.IN1
-S[0] => Decoder0.IN0
-Y[15] <= <GND>
-Y[14] <= <GND>
-Y[13] <= <GND>
-Y[12] <= <GND>
-Y[11] <= <GND>
-Y[10] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[9] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-Y[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|triscPCU:comb_30|triscFSM:comb_4
-SysClock => state~1.DATAIN
-StartStop => state~3.DATAIN
-LDA => nextstate.S.IN1
-LDA => nextstate.P.OUTPUTSELECT
-LDA => nextstate.M.OUTPUTSELECT
-LDA => nextstate.I.DATAA
-STA => nextstate.S.IN0
-STA => nextstate.M.DATAA
-STA => nextstate.P.DATAA
-ADD => nextstate.S.IN1
-SUB => ~NO_FANOUT~
-XOR => ~NO_FANOUT~
-INC => nextstate.S.IN1
-INC => nextstate.P.OUTPUTSELECT
-INC => nextstate.M.OUTPUTSELECT
-INC => nextstate.I.OUTPUTSELECT
-INC => nextstate.H.OUTPUTSELECT
-INC => nextstate.G.OUTPUTSELECT
-INC => nextstate.F.DATAA
-CLR => nextstate.S.IN1
-CLR => nextstate.P.OUTPUTSELECT
-CLR => nextstate.M.OUTPUTSELECT
-CLR => nextstate.I.OUTPUTSELECT
-CLR => nextstate.H.OUTPUTSELECT
-CLR => nextstate.G.DATAA
-JMP => nextstate.S.IN1
-JMP => nextstate.P.OUTPUTSELECT
-JMP => nextstate.M.OUTPUTSELECT
-JMP => nextstate.I.OUTPUTSELECT
-JMP => nextstate.H.DATAA
-JPZ => ~NO_FANOUT~
-JPN => ~NO_FANOUT~
-HLT => ~NO_FANOUT~
-C0 <= C0.DB_MAX_OUTPUT_PORT_TYPE
-C1 <= C1.DB_MAX_OUTPUT_PORT_TYPE
-C2 <= C7.DB_MAX_OUTPUT_PORT_TYPE
-C3 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-C4 <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-C7 <= C7.DB_MAX_OUTPUT_PORT_TYPE
-C8 <= C8.DB_MAX_OUTPUT_PORT_TYPE
-C9 <= C9.DB_MAX_OUTPUT_PORT_TYPE
-C5 <= C5.DB_MAX_OUTPUT_PORT_TYPE
-C10 <= C10.DB_MAX_OUTPUT_PORT_TYPE
-C11 <= C11.DB_MAX_OUTPUT_PORT_TYPE
-C12 <= <GND>
-C13 <= <GND>
-C14 <= C14.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|acc:comb_31
-clear => clear.IN1
-load => load.IN1
-inc => inc.IN1
-AB => AB.IN1
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-Z[0] <= BinUp:RegCount.Q
-Z[1] <= BinUp:RegCount.Q
-Z[2] <= BinUp:RegCount.Q
-Z[3] <= BinUp:RegCount.Q
-
-
-|trisc|acc:comb_31|two2one:two2oneMUX
-A[0] => Y.DATAB
-A[1] => Y.DATAB
-A[2] => Y.DATAB
-A[3] => Y.DATAB
-B[0] => Y.DATAA
-B[1] => Y.DATAA
-B[2] => Y.DATAA
-B[3] => Y.DATAA
-S => Y.OUTPUTSELECT
-S => Y.OUTPUTSELECT
-S => Y.OUTPUTSELECT
-S => Y.OUTPUTSELECT
-Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
-Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
-Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
-Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|acc:comb_31|BinUp:RegCount
-inc => Q[0]~reg0.CLK
-inc => Q[1]~reg0.CLK
-inc => Q[2]~reg0.CLK
-inc => Q[3]~reg0.CLK
-clear => Q[3].IN0
-clear => Q[0]~reg0.ACLR
-clear => Q[1]~reg0.ACLR
-clear => Q[2]~reg0.ACLR
-clear => Q[3]~reg0.ACLR
-load => Q[3].IN1
-D[0] => Q[0]~reg0.ADATA
-D[1] => Q[1]~reg0.ADATA
-D[2] => Q[2]~reg0.ADATA
-D[3] => Q[3]~reg0.ADATA
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|IR:BR
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-CLK => Q[0]~reg0.CLK
-CLK => Q[1]~reg0.CLK
-CLK => Q[2]~reg0.CLK
-CLK => Q[3]~reg0.CLK
-CLR => Q[0]~reg0.ACLR
-CLR => Q[1]~reg0.ACLR
-CLR => Q[2]~reg0.ACLR
-CLR => Q[3]~reg0.ACLR
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|alu:comb_36
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-S[0] => S[0].IN1
-S[1] => Equal0.IN0
-S[1] => Equal1.IN1
-S[1] => Equal2.IN0
-S[1] => Equal3.IN0
-R[0] <= R[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
-R[1] <= R[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
-R[2] <= R[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
-R[3] <= R[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|alu:comb_36|AdderSubtractor:comb_3
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => comb.IN0
-B[1] => comb.IN0
-B[2] => comb.IN0
-B[3] => comb.IN0
-Cin => C[0].IN1
-S[0] <= fulladder:s0.port3
-S[1] <= fulladder:s1.port3
-S[2] <= fulladder:s2.port3
-S[3] <= fulladder:s3.port3
-Cout <= fulladder:s3.port4
-Ovr <= comb.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|alu:comb_36|AdderSubtractor:comb_3|fulladder:s0
-ai => Decoder0.IN0
-bi => Decoder0.IN1
-cini => Decoder0.IN2
-si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|alu:comb_36|AdderSubtractor:comb_3|fulladder:s1
-ai => Decoder0.IN0
-bi => Decoder0.IN1
-cini => Decoder0.IN2
-si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|alu:comb_36|AdderSubtractor:comb_3|fulladder:s2
-ai => Decoder0.IN0
-bi => Decoder0.IN1
-cini => Decoder0.IN2
-si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|alu:comb_36|AdderSubtractor:comb_3|fulladder:s3
-ai => Decoder0.IN0
-bi => Decoder0.IN1
-cini => Decoder0.IN2
-si <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-couti <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|BinUp:comb_37
-inc => Q[0]~reg0.CLK
-inc => Q[1]~reg0.CLK
-inc => Q[2]~reg0.CLK
-inc => Q[3]~reg0.CLK
-clear => Q[3].IN0
-clear => Q[0]~reg0.ACLR
-clear => Q[1]~reg0.ACLR
-clear => Q[2]~reg0.ACLR
-clear => Q[3]~reg0.ACLR
-load => Q[3].IN1
-D[0] => Q[0]~reg0.ADATA
-D[1] => Q[1]~reg0.ADATA
-D[2] => Q[2]~reg0.ADATA
-D[3] => Q[3]~reg0.ADATA
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|trisc|binary2seven:comb_41
+|trisc|binary2seven:comb_51
 b[0] => Decoder0.IN3
 b[1] => Decoder0.IN2
 b[2] => Decoder0.IN1
@@ -552,7 +555,7 @@ a[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 a[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|trisc|binary2seven:comb_42
+|trisc|binary2seven:comb_52
 b[0] => Decoder0.IN3
 b[1] => Decoder0.IN2
 b[2] => Decoder0.IN1
@@ -566,7 +569,7 @@ a[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 a[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|trisc|binary2seven:comb_43
+|trisc|binary2seven:comb_53
 b[0] => Decoder0.IN3
 b[1] => Decoder0.IN2
 b[2] => Decoder0.IN1
@@ -580,7 +583,7 @@ a[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 a[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|trisc|binary2seven:comb_44
+|trisc|binary2seven:comb_54
 b[0] => Decoder0.IN3
 b[1] => Decoder0.IN2
 b[2] => Decoder0.IN1
@@ -594,7 +597,7 @@ a[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 a[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|trisc|binary2seven:comb_45
+|trisc|binary2seven:comb_55
 b[0] => Decoder0.IN3
 b[1] => Decoder0.IN2
 b[2] => Decoder0.IN1
@@ -608,7 +611,7 @@ a[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 a[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|trisc|binary2seven:comb_46
+|trisc|binary2seven:comb_56
 b[0] => Decoder0.IN3
 b[1] => Decoder0.IN2
 b[2] => Decoder0.IN1

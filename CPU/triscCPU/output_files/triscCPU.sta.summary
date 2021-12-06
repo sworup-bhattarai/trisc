@@ -1,0 +1,389 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'SysClock'
+Slack : -9.379
+TNS   : -61.495
+
+Type  : Slow 1200mV 85C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -8.431
+TNS   : -91.168
+
+Type  : Slow 1200mV 85C Model Setup 'ClockIn'
+Slack : -8.090
+TNS   : -37.095
+
+Type  : Slow 1200mV 85C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : -7.738
+TNS   : -27.459
+
+Type  : Slow 1200mV 85C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -6.989
+TNS   : -27.279
+
+Type  : Slow 1200mV 85C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : -6.645
+TNS   : -24.550
+
+Type  : Slow 1200mV 85C Model Setup 'IR:InstructionRegester|Q[0]'
+Slack : -4.366
+TNS   : -24.349
+
+Type  : Slow 1200mV 85C Model Setup 'OnOffToggle:DivideX2|state'
+Slack : -0.175
+TNS   : -0.350
+
+Type  : Slow 1200mV 85C Model Hold 'SysClock'
+Slack : 0.302
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'OnOffToggle:DivideX2|state'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'IR:InstructionRegester|Q[0]'
+Slack : 0.686
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ClockIn'
+Slack : 0.839
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : 1.208
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 4.088
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 4.647
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : -2.547
+TNS   : -7.008
+
+Type  : Slow 1200mV 85C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -2.335
+TNS   : -9.340
+
+Type  : Slow 1200mV 85C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -2.151
+TNS   : -8.554
+
+Type  : Slow 1200mV 85C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : -1.724
+TNS   : -4.998
+
+Type  : Slow 1200mV 85C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 0.605
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 0.877
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : 1.741
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : 1.882
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SysClock'
+Slack : -3.000
+TNS   : -59.105
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClockIn'
+Slack : -3.000
+TNS   : -31.045
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'OnOffToggle:DivideX2|state'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IR:InstructionRegester|Q[0]'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SysClock'
+Slack : -8.666
+TNS   : -52.703
+
+Type  : Slow 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -7.649
+TNS   : -85.317
+
+Type  : Slow 1200mV 0C Model Setup 'ClockIn'
+Slack : -7.506
+TNS   : -33.804
+
+Type  : Slow 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : -7.077
+TNS   : -24.952
+
+Type  : Slow 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -6.302
+TNS   : -24.713
+
+Type  : Slow 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : -6.068
+TNS   : -22.298
+
+Type  : Slow 1200mV 0C Model Setup 'IR:InstructionRegester|Q[0]'
+Slack : -4.204
+TNS   : -24.513
+
+Type  : Slow 1200mV 0C Model Setup 'OnOffToggle:DivideX2|state'
+Slack : -0.074
+TNS   : -0.147
+
+Type  : Slow 1200mV 0C Model Hold 'SysClock'
+Slack : 0.095
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'OnOffToggle:DivideX2|state'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'IR:InstructionRegester|Q[0]'
+Slack : 0.719
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ClockIn'
+Slack : 0.797
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : 1.083
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 3.770
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 4.289
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : -2.488
+TNS   : -6.926
+
+Type  : Slow 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -2.020
+TNS   : -8.044
+
+Type  : Slow 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -1.982
+TNS   : -7.928
+
+Type  : Slow 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : -1.760
+TNS   : -5.202
+
+Type  : Slow 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 0.756
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 1.007
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : 1.694
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : 1.803
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SysClock'
+Slack : -3.000
+TNS   : -58.126
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClockIn'
+Slack : -3.000
+TNS   : -30.066
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -1.403
+TNS   : -11.224
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'OnOffToggle:DivideX2|state'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IR:InstructionRegester|Q[0]'
+Slack : 0.307
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -4.055
+TNS   : -32.076
+
+Type  : Fast 1200mV 0C Model Setup 'SysClock'
+Slack : -4.030
+TNS   : -19.368
+
+Type  : Fast 1200mV 0C Model Setup 'ClockIn'
+Slack : -3.326
+TNS   : -10.592
+
+Type  : Fast 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : -3.307
+TNS   : -11.498
+
+Type  : Fast 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -3.257
+TNS   : -12.768
+
+Type  : Fast 1200mV 0C Model Setup 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : -2.744
+TNS   : -10.033
+
+Type  : Fast 1200mV 0C Model Setup 'IR:InstructionRegester|Q[0]'
+Slack : -1.376
+TNS   : -1.760
+
+Type  : Fast 1200mV 0C Model Setup 'OnOffToggle:DivideX2|state'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'IR:InstructionRegester|Q[0]'
+Slack : -0.006
+TNS   : -0.009
+
+Type  : Fast 1200mV 0C Model Hold 'OnOffToggle:DivideX2|state'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : 0.213
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ClockIn'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'SysClock'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 1.987
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 2.250
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -0.953
+TNS   : -3.812
+
+Type  : Fast 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -0.630
+TNS   : -2.494
+
+Type  : Fast 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : -0.565
+TNS   : -0.744
+
+Type  : Fast 1200mV 0C Model Recovery 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : -0.190
+TNS   : -0.190
+
+Type  : Fast 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : 0.538
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : 0.549
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SysClock'
+Slack : -3.000
+TNS   : -39.075
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClockIn'
+Slack : -3.000
+TNS   : -19.107
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.E'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'OnOffToggle:DivideX2|state'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.F'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.H'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'triscPCU:PCU|triscFSM:FSM|state.L'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IR:InstructionRegester|Q[0]'
+Slack : 0.432
+TNS   : 0.000
+
+------------------------------------------------------------

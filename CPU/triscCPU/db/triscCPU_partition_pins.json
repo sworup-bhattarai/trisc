@@ -1,0 +1,281 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "C[14]",
+					"strict" : false
+				},
+				{
+					"name" : "C[11]",
+					"strict" : false
+				},
+				{
+					"name" : "C[10]",
+					"strict" : false
+				},
+				{
+					"name" : "C[9]",
+					"strict" : false
+				},
+				{
+					"name" : "C[8]",
+					"strict" : false
+				},
+				{
+					"name" : "C[7]",
+					"strict" : false
+				},
+				{
+					"name" : "C[5]",
+					"strict" : false
+				},
+				{
+					"name" : "C[4]",
+					"strict" : false
+				},
+				{
+					"name" : "C[3]",
+					"strict" : false
+				},
+				{
+					"name" : "C[2]",
+					"strict" : false
+				},
+				{
+					"name" : "C[1]",
+					"strict" : false
+				},
+				{
+					"name" : "C[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MDIout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[8]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[9]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[10]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[11]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[12]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[13]",
+					"strict" : false
+				},
+				{
+					"name" : "MDOout[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MAR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Mode",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SysClock",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "RW",
+					"strict" : false
+				},
+				{
+					"name" : "ClearAddGen",
+					"strict" : false
+				},
+				{
+					"name" : "ClockIn",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

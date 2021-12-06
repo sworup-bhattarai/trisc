@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at nbitbinary.v(10): always construct contains both blocking and non-blocking assignments File: D:/School/UTA/Fall_2021/CSE_2441/trisc/CPU/nbitbinary/nbitbinary.v Line: 10

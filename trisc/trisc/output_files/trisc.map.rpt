@@ -1,5 +1,5 @@
 Analysis & Synthesis report for trisc
-Sat Dec 04 14:48:22 2021
+Sun Dec 05 17:09:29 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,30 +14,31 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |trisc|triscPCU:comb_30|triscFSM:comb_4|state
+  9. State Machine - |trisc|triscPCU:triscPCU_inst|triscFSM:comb_4|state
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Source assignments for triscRAM:RAM|altsyncram:altsyncram_component|altsyncram_6fl1:auto_generated
- 15. Parameter Settings for User Entity Instance: OnOffToggle:DivideX2
- 16. Parameter Settings for User Entity Instance: BinUp:AddressGen
- 17. Parameter Settings for User Entity Instance: triscRAM:RAM|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: IR:IR
- 19. Parameter Settings for User Entity Instance: triscPCU:comb_30|triscFSM:comb_4
- 20. Parameter Settings for User Entity Instance: acc:comb_31|two2one:two2oneMUX
- 21. Parameter Settings for User Entity Instance: acc:comb_31|BinUp:RegCount
- 22. Parameter Settings for User Entity Instance: IR:BR
- 23. Parameter Settings for User Entity Instance: BinUp:comb_37
- 24. altsyncram Parameter Settings by Entity Instance
- 25. Port Connectivity Checks: "alu:comb_36|AdderSubtractor:comb_3"
- 26. Port Connectivity Checks: "acc:comb_31"
- 27. Port Connectivity Checks: "triscPCU:comb_30|fourtosixteen:comb_3"
- 28. Port Connectivity Checks: "BinUp:AddressGen"
- 29. Port Connectivity Checks: "OnOffToggle:DivideX2"
+ 15. Parameter Settings for User Entity Instance: IR:InstructionReg
+ 16. Parameter Settings for User Entity Instance: triscPCU:triscPCU_inst|triscFSM:comb_4
+ 17. Parameter Settings for User Entity Instance: nbitbinary:ProgramCounter
+ 18. Parameter Settings for User Entity Instance: acc:acc_inst
+ 19. Parameter Settings for User Entity Instance: acc:acc_inst|two2one:two2oneMUX
+ 20. Parameter Settings for User Entity Instance: acc:acc_inst|BinUp:RegCount
+ 21. Parameter Settings for User Entity Instance: IR:BufferReg
+ 22. Parameter Settings for User Entity Instance: OnOffToggle:DivideX2
+ 23. Parameter Settings for User Entity Instance: BinUp:AddressGen
+ 24. Parameter Settings for User Entity Instance: triscRAM:RAM|altsyncram:altsyncram_component
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. Port Connectivity Checks: "BinUp:AddressGen"
+ 27. Port Connectivity Checks: "OnOffToggle:DivideX2"
+ 28. Port Connectivity Checks: "alu:alu_inst|AdderSubtractor:comb_3"
+ 29. Port Connectivity Checks: "triscPCU:triscPCU_inst|fourtosixteen:comb_3"
  30. Post-Synthesis Netlist Statistics for Top Partition
  31. Elapsed Time Per Partition
  32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,16 +65,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec 04 14:48:22 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec 05 17:09:29 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; trisc                                       ;
 ; Top-level Entity Name              ; trisc                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 156                                         ;
-;     Total combinational functions  ; 151                                         ;
-;     Dedicated logic registers      ; 38                                          ;
-; Total registers                    ; 38                                          ;
-; Total pins                         ; 75                                          ;
+; Total logic elements               ; 160                                         ;
+;     Total combinational functions  ; 155                                         ;
+;     Dedicated logic registers      ; 42                                          ;
+; Total registers                    ; 42                                          ;
+; Total pins                         ; 77                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 128                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -187,69 +188,70 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+--------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
-+--------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; ../triscFSM/triscFSM.v               ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v                        ;         ;
-; ../alu/alu.v                         ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/alu/alu.v                                  ;         ;
-; ../triscPCU/triscPCU.v               ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v                        ;         ;
-; ../AdderSubtractor/AdderSubtractor.v ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/AdderSubtractor/AdderSubtractor.v          ;         ;
-; ../fulladder/fulladder.v             ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/fulladder/fulladder.v                      ;         ;
-; ../binary2seven/binary2seven.v       ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/binary2seven/binary2seven.v                ;         ;
-; ../fourtosixteen/fourtosixteen.v     ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/fourtosixteen/fourtosixteen.v              ;         ;
-; ../OnOffToggle/OnOffToggle.v         ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/OnOffToggle/OnOffToggle.v                  ;         ;
-; ../BinUp/BinUp.v                     ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v                              ;         ;
-; trisc.v                              ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v                              ;         ;
-; ../triscRAM/triscRAM.v               ; yes             ; User Wizard-Generated File   ; E:/Fall_2021/CSE_2441/trisc/triscRAM/triscRAM.v                        ;         ;
-; IR.v                                 ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/trisc/IR.v                                 ;         ;
-; acc.v                                ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/trisc/acc.v                                ;         ;
-; two2one.v                            ; yes             ; User Verilog HDL File        ; E:/Fall_2021/CSE_2441/trisc/trisc/two2one.v                            ;         ;
-; altsyncram.tdf                       ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc                ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                          ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                       ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal201.inc                       ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; a_rdenreg.inc                        ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                           ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                           ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                         ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_6fl1.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Fall_2021/CSE_2441/trisc/trisc/db/altsyncram_6fl1.tdf               ;         ;
-+--------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; ../nbitbinary/nbitbinary.v           ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v           ;         ;
+; ../triscFSM/triscFSM.v               ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v               ;         ;
+; ../alu/alu.v                         ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v                         ;         ;
+; ../triscPCU/triscPCU.v               ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v               ;         ;
+; ../AdderSubtractor/AdderSubtractor.v ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/AdderSubtractor/AdderSubtractor.v ;         ;
+; ../fulladder/fulladder.v             ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/fulladder/fulladder.v             ;         ;
+; ../binary2seven/binary2seven.v       ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/binary2seven/binary2seven.v       ;         ;
+; ../fourtosixteen/fourtosixteen.v     ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/fourtosixteen/fourtosixteen.v     ;         ;
+; ../OnOffToggle/OnOffToggle.v         ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/OnOffToggle/OnOffToggle.v         ;         ;
+; ../BinUp/BinUp.v                     ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/BinUp/BinUp.v                     ;         ;
+; trisc.v                              ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v                     ;         ;
+; ../triscRAM/triscRAM.v               ; yes             ; User Wizard-Generated File   ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscRAM/triscRAM.v               ;         ;
+; IR.v                                 ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/IR.v                        ;         ;
+; acc.v                                ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/acc.v                       ;         ;
+; two2one.v                            ; yes             ; User Verilog HDL File        ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/two2one.v                   ;         ;
+; altsyncram.tdf                       ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
+; stratix_ram_block.inc                ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
+; lpm_mux.inc                          ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
+; lpm_decode.inc                       ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
+; aglobal201.inc                       ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/aglobal201.inc                ;         ;
+; a_rdenreg.inc                        ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
+; altrom.inc                           ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altrom.inc                    ;         ;
+; altram.inc                           ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altram.inc                    ;         ;
+; altdpram.inc                         ; yes             ; Megafunction                 ; d:/quartus_prime/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
+; db/altsyncram_6fl1.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/db/altsyncram_6fl1.tdf      ;         ;
++--------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                            ;
-+---------------------------------------------+------------------------------------------+
-; Resource                                    ; Usage                                    ;
-+---------------------------------------------+------------------------------------------+
-; Estimated Total logic elements              ; 156                                      ;
-;                                             ;                                          ;
-; Total combinational functions               ; 151                                      ;
-; Logic element usage by number of LUT inputs ;                                          ;
-;     -- 4 input functions                    ; 83                                       ;
-;     -- 3 input functions                    ; 42                                       ;
-;     -- <=2 input functions                  ; 26                                       ;
-;                                             ;                                          ;
-; Logic elements by mode                      ;                                          ;
-;     -- normal mode                          ; 151                                      ;
-;     -- arithmetic mode                      ; 0                                        ;
-;                                             ;                                          ;
-; Total registers                             ; 38                                       ;
-;     -- Dedicated logic registers            ; 38                                       ;
-;     -- I/O registers                        ; 0                                        ;
-;                                             ;                                          ;
-; I/O pins                                    ; 75                                       ;
-; Total memory bits                           ; 128                                      ;
-;                                             ;                                          ;
-; Embedded Multiplier 9-bit elements          ; 0                                        ;
-;                                             ;                                          ;
-; Maximum fan-out node                        ; triscPCU:comb_30|triscFSM:comb_4|state.E ;
-; Maximum fan-out                             ; 25                                       ;
-; Total fan-out                               ; 804                                      ;
-; Average fan-out                             ; 2.32                                     ;
-+---------------------------------------------+------------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 160         ;
+;                                             ;             ;
+; Total combinational functions               ; 155         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 85          ;
+;     -- 3 input functions                    ; 43          ;
+;     -- <=2 input functions                  ; 27          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 155         ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 42          ;
+;     -- Dedicated logic registers            ; 42          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 77          ;
+; Total memory bits                           ; 128         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Start~input ;
+; Maximum fan-out                             ; 29          ;
+; Total fan-out                               ; 835         ;
+; Average fan-out                             ; 2.33        ;
++---------------------------------------------+-------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -257,22 +259,29 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------+-----------------+--------------+
-; |trisc                                    ; 151 (21)            ; 38 (0)                    ; 128         ; 0          ; 0            ; 0       ; 0         ; 75   ; 0            ; 0          ; |trisc                                                                             ; trisc           ; work         ;
+; |trisc                                    ; 155 (19)            ; 42 (0)                    ; 128         ; 0          ; 0            ; 0       ; 0         ; 77   ; 0            ; 0          ; |trisc                                                                             ; trisc           ; work         ;
 ;    |BinUp:AddressGen|                     ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|BinUp:AddressGen                                                            ; BinUp           ; work         ;
-;    |BinUp:comb_37|                        ; 18 (18)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|BinUp:comb_37                                                               ; BinUp           ; work         ;
-;    |IR:IR|                                ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|IR:IR                                                                       ; IR              ; work         ;
+;    |IR:BufferReg|                         ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|IR:BufferReg                                                                ; IR              ; work         ;
+;    |IR:InstructionReg|                    ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|IR:InstructionReg                                                           ; IR              ; work         ;
 ;    |OnOffToggle:DivideX2|                 ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|OnOffToggle:DivideX2                                                        ; OnOffToggle     ; work         ;
-;    |acc:comb_31|                          ; 18 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|acc:comb_31                                                                 ; acc             ; work         ;
-;       |BinUp:RegCount|                    ; 18 (18)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|acc:comb_31|BinUp:RegCount                                                  ; BinUp           ; work         ;
-;    |binary2seven:comb_41|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_41                                                        ; binary2seven    ; work         ;
-;    |binary2seven:comb_42|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_42                                                        ; binary2seven    ; work         ;
-;    |binary2seven:comb_43|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_43                                                        ; binary2seven    ; work         ;
-;    |binary2seven:comb_44|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_44                                                        ; binary2seven    ; work         ;
-;    |binary2seven:comb_45|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_45                                                        ; binary2seven    ; work         ;
-;    |binary2seven:comb_46|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_46                                                        ; binary2seven    ; work         ;
-;    |triscPCU:comb_30|                     ; 46 (0)              ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscPCU:comb_30                                                            ; triscPCU        ; work         ;
-;       |fourtosixteen:comb_3|              ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscPCU:comb_30|fourtosixteen:comb_3                                       ; fourtosixteen   ; work         ;
-;       |triscFSM:comb_4|                   ; 41 (41)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscPCU:comb_30|triscFSM:comb_4                                            ; triscFSM        ; work         ;
+;    |acc:acc_inst|                         ; 18 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|acc:acc_inst                                                                ; acc             ; work         ;
+;       |BinUp:RegCount|                    ; 18 (18)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|acc:acc_inst|BinUp:RegCount                                                 ; BinUp           ; work         ;
+;    |alu:alu_inst|                         ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|alu:alu_inst                                                                ; alu             ; work         ;
+;       |AdderSubtractor:comb_3|            ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|alu:alu_inst|AdderSubtractor:comb_3                                         ; AdderSubtractor ; work         ;
+;          |fulladder:s0|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s0                            ; fulladder       ; work         ;
+;          |fulladder:s1|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s1                            ; fulladder       ; work         ;
+;          |fulladder:s2|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s2                            ; fulladder       ; work         ;
+;          |fulladder:s3|                   ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|alu:alu_inst|AdderSubtractor:comb_3|fulladder:s3                            ; fulladder       ; work         ;
+;    |binary2seven:comb_51|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_51                                                        ; binary2seven    ; work         ;
+;    |binary2seven:comb_52|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_52                                                        ; binary2seven    ; work         ;
+;    |binary2seven:comb_53|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_53                                                        ; binary2seven    ; work         ;
+;    |binary2seven:comb_54|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_54                                                        ; binary2seven    ; work         ;
+;    |binary2seven:comb_55|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_55                                                        ; binary2seven    ; work         ;
+;    |binary2seven:comb_56|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|binary2seven:comb_56                                                        ; binary2seven    ; work         ;
+;    |nbitbinary:ProgramCounter|            ; 18 (18)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|nbitbinary:ProgramCounter                                                   ; nbitbinary      ; work         ;
+;    |triscPCU:triscPCU_inst|               ; 46 (0)              ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscPCU:triscPCU_inst                                                      ; triscPCU        ; work         ;
+;       |fourtosixteen:comb_3|              ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscPCU:triscPCU_inst|fourtosixteen:comb_3                                 ; fourtosixteen   ; work         ;
+;       |triscFSM:comb_4|                   ; 41 (41)             ; 21 (21)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscPCU:triscPCU_inst|triscFSM:comb_4                                      ; triscFSM        ; work         ;
 ;    |triscRAM:RAM|                         ; 0 (0)               ; 0 (0)                     ; 128         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscRAM:RAM                                                                ; triscRAM        ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 128         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscRAM:RAM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;          |altsyncram_6fl1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |trisc|triscRAM:RAM|altsyncram:altsyncram_component|altsyncram_6fl1:auto_generated ; altsyncram_6fl1 ; work         ;
@@ -291,7 +300,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |trisc|triscPCU:comb_30|triscFSM:comb_4|state                                                                                                                                                             ;
+; State Machine - |trisc|triscPCU:triscPCU_inst|triscFSM:comb_4|state                                                                                                                                                       ;
 +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
 ; Name    ; state.U ; state.T ; state.S ; state.R ; state.Q ; state.P ; state.O ; state.N ; state.M ; state.L ; state.K ; state.J ; state.I ; state.H ; state.G ; state.F ; state.E ; state.D ; state.C ; state.B ; state.A ;
 +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
@@ -319,49 +328,48 @@ Encoding Type:  One-Hot
 +---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                        ;
-+-----------------------------------------------------+---------------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                         ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------------------------------+------------------------+
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.B_817    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.C_798    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.D_779    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.E_760    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.U_474    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.L_639    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.T_493    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.F_741    ; GND                                         ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.G_725    ; GND                                         ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.N_604    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.O_585    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.J_677    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.K_658    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.Q_550    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.R_531    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.H_709    ; GND                                         ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.S_512    ; triscPCU:comb_30|triscFSM:comb_4|Selector27 ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.M_620    ; GND                                         ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.I_693    ; GND                                         ; yes                    ;
-; triscPCU:comb_30|triscFSM:comb_4|nextstate.P_566    ; GND                                         ; yes                    ;
-; Number of user-specified and inferred latches = 20  ;                                             ;                        ;
-+-----------------------------------------------------+---------------------------------------------+------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                 ;
++--------------------------------------------------------+---------------------------------------------------+------------------------+
+; Latch Name                                             ; Latch Enable Signal                               ; Free of Timing Hazards ;
++--------------------------------------------------------+---------------------------------------------------+------------------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.B_817 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.C_798 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.D_779 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.E_760 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.U_474 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.L_639 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.T_493 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.F_741 ; GND                                               ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.G_725 ; GND                                               ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.N_604 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.O_585 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.J_677 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.K_658 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.Q_550 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.R_531 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.H_709 ; GND                                               ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.S_512 ; triscPCU:triscPCU_inst|triscFSM:comb_4|Selector27 ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.M_620 ; GND                                               ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.I_693 ; GND                                               ; yes                    ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|nextstate.P_566 ; GND                                               ; yes                    ;
+; Number of user-specified and inferred latches = 20     ;                                                   ;                        ;
++--------------------------------------------------------+---------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------+
-; Registers Removed During Synthesis                            ;
-+------------------------------------------+--------------------+
-; Register name                            ; Reason for Removal ;
-+------------------------------------------+--------------------+
-; IR:BR|Q[0..3]                            ; Lost fanout        ;
-; triscPCU:comb_30|triscFSM:comb_4|state~4 ; Lost fanout        ;
-; triscPCU:comb_30|triscFSM:comb_4|state~5 ; Lost fanout        ;
-; triscPCU:comb_30|triscFSM:comb_4|state~6 ; Lost fanout        ;
-; triscPCU:comb_30|triscFSM:comb_4|state~7 ; Lost fanout        ;
-; triscPCU:comb_30|triscFSM:comb_4|state~8 ; Lost fanout        ;
-; Total Number of Removed Registers = 9    ;                    ;
-+------------------------------------------+--------------------+
++---------------------------------------------------------------------+
+; Registers Removed During Synthesis                                  ;
++------------------------------------------------+--------------------+
+; Register name                                  ; Reason for Removal ;
++------------------------------------------------+--------------------+
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state~4 ; Lost fanout        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state~5 ; Lost fanout        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state~6 ; Lost fanout        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state~7 ; Lost fanout        ;
+; triscPCU:triscPCU_inst|triscFSM:comb_4|state~8 ; Lost fanout        ;
+; Total Number of Removed Registers = 5          ;                    ;
++------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -369,10 +377,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 38    ;
+; Total registers                              ; 42    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 37    ;
+; Number of registers using Asynchronous Clear ; 41    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -395,6 +403,96 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+--------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
 +---------------------------------+--------------------+------+--------------------------------------+
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IR:InstructionReg ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: triscPCU:triscPCU_inst|triscFSM:comb_4 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; A              ; 00000 ; Unsigned Binary                                            ;
+; B              ; 00001 ; Unsigned Binary                                            ;
+; C              ; 00010 ; Unsigned Binary                                            ;
+; D              ; 00011 ; Unsigned Binary                                            ;
+; E              ; 00100 ; Unsigned Binary                                            ;
+; F              ; 00101 ; Unsigned Binary                                            ;
+; G              ; 00110 ; Unsigned Binary                                            ;
+; H              ; 00111 ; Unsigned Binary                                            ;
+; I              ; 01000 ; Unsigned Binary                                            ;
+; J              ; 01001 ; Unsigned Binary                                            ;
+; K              ; 01010 ; Unsigned Binary                                            ;
+; L              ; 01011 ; Unsigned Binary                                            ;
+; M              ; 01100 ; Unsigned Binary                                            ;
+; N              ; 01101 ; Unsigned Binary                                            ;
+; O              ; 01110 ; Unsigned Binary                                            ;
+; P              ; 01111 ; Unsigned Binary                                            ;
+; Q              ; 10000 ; Unsigned Binary                                            ;
+; R              ; 10001 ; Unsigned Binary                                            ;
+; S              ; 10010 ; Unsigned Binary                                            ;
+; T              ; 10011 ; Unsigned Binary                                            ;
+; U              ; 10100 ; Unsigned Binary                                            ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: nbitbinary:ProgramCounter ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 4     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: acc:acc_inst ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 4     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: acc:acc_inst|two2one:two2oneMUX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: acc:acc_inst|BinUp:RegCount ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 4     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IR:BufferReg ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; N              ; 4     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------+
@@ -479,86 +577,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------+
-; Parameter Settings for User Entity Instance: IR:IR ;
-+----------------+-------+---------------------------+
-; Parameter Name ; Value ; Type                      ;
-+----------------+-------+---------------------------+
-; N              ; 4     ; Signed Integer            ;
-+----------------+-------+---------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: triscPCU:comb_30|triscFSM:comb_4 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; A              ; 00000 ; Unsigned Binary                                      ;
-; B              ; 00001 ; Unsigned Binary                                      ;
-; C              ; 00010 ; Unsigned Binary                                      ;
-; D              ; 00011 ; Unsigned Binary                                      ;
-; E              ; 00100 ; Unsigned Binary                                      ;
-; F              ; 00101 ; Unsigned Binary                                      ;
-; G              ; 00110 ; Unsigned Binary                                      ;
-; H              ; 00111 ; Unsigned Binary                                      ;
-; I              ; 01000 ; Unsigned Binary                                      ;
-; J              ; 01001 ; Unsigned Binary                                      ;
-; K              ; 01010 ; Unsigned Binary                                      ;
-; L              ; 01011 ; Unsigned Binary                                      ;
-; M              ; 01100 ; Unsigned Binary                                      ;
-; N              ; 01101 ; Unsigned Binary                                      ;
-; O              ; 01110 ; Unsigned Binary                                      ;
-; P              ; 01111 ; Unsigned Binary                                      ;
-; Q              ; 10000 ; Unsigned Binary                                      ;
-; R              ; 10001 ; Unsigned Binary                                      ;
-; S              ; 10010 ; Unsigned Binary                                      ;
-; T              ; 10011 ; Unsigned Binary                                      ;
-; U              ; 10100 ; Unsigned Binary                                      ;
-+----------------+-------+------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: acc:comb_31|two2one:two2oneMUX ;
-+----------------+-------+----------------------------------------------------+
-; Parameter Name ; Value ; Type                                               ;
-+----------------+-------+----------------------------------------------------+
-; N              ; 4     ; Signed Integer                                     ;
-+----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: acc:comb_31|BinUp:RegCount ;
-+----------------+-------+------------------------------------------------+
-; Parameter Name ; Value ; Type                                           ;
-+----------------+-------+------------------------------------------------+
-; N              ; 4     ; Signed Integer                                 ;
-+----------------+-------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------+
-; Parameter Settings for User Entity Instance: IR:BR ;
-+----------------+-------+---------------------------+
-; Parameter Name ; Value ; Type                      ;
-+----------------+-------+---------------------------+
-; N              ; 4     ; Signed Integer            ;
-+----------------+-------+---------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BinUp:comb_37 ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; N              ; 4     ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                         ;
 +-------------------------------------------+----------------------------------------------+
@@ -577,34 +595,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
 +-------------------------------------------+----------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:comb_36|AdderSubtractor:comb_3"                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Ovr  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "acc:comb_31"                                                                                                                                                                    ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; A    ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "triscPCU:comb_30|fourtosixteen:comb_3"                                                   ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Y[11..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------+
@@ -626,26 +616,45 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu_inst|AdderSubtractor:comb_3"                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Ovr  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "triscPCU:triscPCU_inst|fourtosixteen:comb_3"                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y[11..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 75                          ;
-; cycloneiii_ff         ; 38                          ;
-;     CLR               ; 37                          ;
+; boundary_port         ; 77                          ;
+; cycloneiii_ff         ; 42                          ;
+;     CLR               ; 41                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 160                         ;
-;     normal            ; 160                         ;
+; cycloneiii_lcell_comb ; 164                         ;
+;     normal            ; 164                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 23                          ;
-;         3 data inputs ; 42                          ;
-;         4 data inputs ; 83                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 85                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.07                        ;
+; Average LUT depth     ; 3.05                        ;
 +-----------------------+-----------------------------+
 
 
@@ -664,69 +673,110 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 04 14:48:11 2021
+    Info: Processing started: Sun Dec 05 17:09:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off trisc -c trisc
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/triscfsm/triscfsm.v
-    Info (12023): Found entity 1: triscFSM File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/alu/alu.v
-    Info (12023): Found entity 1: alu File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/pipo/pipo.v
-    Info (12023): Found entity 1: pipo File: E:/Fall_2021/CSE_2441/trisc/pipo/pipo.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/nbitbinary/nbitbinary.v
-    Info (12023): Found entity 1: nbitbinary File: E:/Fall_2021/CSE_2441/trisc/nbitbinary/nbitbinary.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/two2onemux/two2onemux.v
-    Info (12023): Found entity 1: two2onemux File: E:/Fall_2021/CSE_2441/trisc/two2onemux/two2onemux.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/triscpcu/triscpcu.v
-    Info (12023): Found entity 1: triscPCU File: E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/addersubtractor/addersubtractor.v
-    Info (12023): Found entity 1: AdderSubtractor File: E:/Fall_2021/CSE_2441/trisc/AdderSubtractor/AdderSubtractor.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/fulladder/fulladder.v
-    Info (12023): Found entity 1: fulladder File: E:/Fall_2021/CSE_2441/trisc/fulladder/fulladder.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/binary2seven/binary2seven.v
-    Info (12023): Found entity 1: binary2seven File: E:/Fall_2021/CSE_2441/trisc/binary2seven/binary2seven.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/fourtosixteen/fourtosixteen.v
-    Info (12023): Found entity 1: fourtosixteen File: E:/Fall_2021/CSE_2441/trisc/fourtosixteen/fourtosixteen.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/onofftoggle/onofftoggle.v
-    Info (12023): Found entity 1: OnOffToggle File: E:/Fall_2021/CSE_2441/trisc/OnOffToggle/OnOffToggle.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/binup/binup.v
-    Info (12023): Found entity 1: BinUp File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/nbitbinary/nbitbinary.v
+    Info (12023): Found entity 1: nbitbinary File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/triscfsm/triscfsm.v
+    Info (12023): Found entity 1: triscFSM File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/alu/alu.v
+    Info (12023): Found entity 1: alu File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/pipo/pipo.v
+    Info (12023): Found entity 1: pipo File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/pipo/pipo.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/two2onemux/two2onemux.v
+    Info (12023): Found entity 1: two2onemux File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/two2onemux/two2onemux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/triscpcu/triscpcu.v
+    Info (12023): Found entity 1: triscPCU File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/addersubtractor/addersubtractor.v
+    Info (12023): Found entity 1: AdderSubtractor File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/AdderSubtractor/AdderSubtractor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/fulladder/fulladder.v
+    Info (12023): Found entity 1: fulladder File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/fulladder/fulladder.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/binary2seven/binary2seven.v
+    Info (12023): Found entity 1: binary2seven File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/binary2seven/binary2seven.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/fourtosixteen/fourtosixteen.v
+    Info (12023): Found entity 1: fourtosixteen File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/fourtosixteen/fourtosixteen.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/onofftoggle/onofftoggle.v
+    Info (12023): Found entity 1: OnOffToggle File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/OnOffToggle/OnOffToggle.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/binup/binup.v
+    Info (12023): Found entity 1: BinUp File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/BinUp/BinUp.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file trisc.v
-    Info (12023): Found entity 1: trisc File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /fall_2021/cse_2441/trisc/triscram/triscram.v
-    Info (12023): Found entity 1: triscRAM File: E:/Fall_2021/CSE_2441/trisc/triscRAM/triscRAM.v Line: 40
+    Info (12023): Found entity 1: trisc File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /school/uta/fall_2021/cse_2441/trisc/trisc/triscram/triscram.v
+    Info (12023): Found entity 1: triscRAM File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscRAM/triscRAM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file ir.v
-    Info (12023): Found entity 1: IR File: E:/Fall_2021/CSE_2441/trisc/trisc/IR.v Line: 2
+    Info (12023): Found entity 1: IR File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/IR.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file acc.v
-    Info (12023): Found entity 1: acc File: E:/Fall_2021/CSE_2441/trisc/trisc/acc.v Line: 1
+    Info (12023): Found entity 1: acc File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/acc.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file two2one.v
-    Info (12023): Found entity 1: two2one File: E:/Fall_2021/CSE_2441/trisc/trisc/two2one.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at alu.v(14): instance has no name File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 14
-Critical Warning (10846): Verilog HDL Instantiation warning at triscPCU.v(9): instance has no name File: E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v Line: 9
-Critical Warning (10846): Verilog HDL Instantiation warning at triscPCU.v(14): instance has no name File: E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v Line: 14
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(59): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 59
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(61): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 61
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(65): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 65
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(67): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 67
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(72): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 72
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(73): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 73
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(74): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 74
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(75): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 75
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(76): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 76
-Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(77): instance has no name File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 77
+    Info (12023): Found entity 1: two2one File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/two2one.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at alu.v(14): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at triscPCU.v(10): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at triscPCU.v(15): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(116): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 116
+Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(117): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 117
+Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(118): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 118
+Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(119): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 119
+Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(120): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 120
+Critical Warning (10846): Verilog HDL Instantiation warning at trisc.v(121): instance has no name File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 121
 Info (12127): Elaborating entity "trisc" for the top level hierarchy
-Warning (10030): Net "MDI[7..4]" at trisc.v(18) has no driver or initial value, using a default initial value '0' File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 18
-Warning (10034): Output port "MDOut[15]" at trisc.v(8) has no driver File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-Warning (10034): Output port "MDOut[7]" at trisc.v(8) has no driver File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-Warning (10034): Output port "MDIn[15]" at trisc.v(8) has no driver File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-Warning (10034): Output port "MDIn[7]" at trisc.v(8) has no driver File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-Info (12128): Elaborating entity "OnOffToggle" for hierarchy "OnOffToggle:DivideX2" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 33
-Info (12128): Elaborating entity "BinUp" for hierarchy "BinUp:AddressGen" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 42
-Info (12128): Elaborating entity "triscRAM" for hierarchy "triscRAM:RAM" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 52
-Info (12128): Elaborating entity "altsyncram" for hierarchy "triscRAM:RAM|altsyncram:altsyncram_component" File: E:/Fall_2021/CSE_2441/trisc/triscRAM/triscRAM.v Line: 86
-Info (12130): Elaborated megafunction instantiation "triscRAM:RAM|altsyncram:altsyncram_component" File: E:/Fall_2021/CSE_2441/trisc/triscRAM/triscRAM.v Line: 86
-Info (12133): Instantiated megafunction "triscRAM:RAM|altsyncram:altsyncram_component" with the following parameter: File: E:/Fall_2021/CSE_2441/trisc/triscRAM/triscRAM.v Line: 86
+Warning (10036): Verilog HDL or VHDL warning at trisc.v(14): object "Acc2Alu" assigned a value but never read File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 14
+Warning (10230): Verilog HDL assignment warning at trisc.v(22): truncated value with size 8 to match size of target (4) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 22
+Warning (10030): Net "MDI[7..4]" at trisc.v(16) has no driver or initial value, using a default initial value '0' File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 16
+Warning (10034): Output port "MDOut[7]" at trisc.v(8) has no driver File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 8
+Warning (10034): Output port "MDIn[7]" at trisc.v(8) has no driver File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 8
+Info (12128): Elaborating entity "IR" for hierarchy "IR:InstructionReg" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 35
+Info (12128): Elaborating entity "triscPCU" for hierarchy "triscPCU:triscPCU_inst" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 43
+Warning (10034): Output port "C[6]" at triscPCU.v(7) has no driver File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v Line: 7
+Info (12128): Elaborating entity "fourtosixteen" for hierarchy "triscPCU:triscPCU_inst|fourtosixteen:comb_3" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v Line: 10
+Info (12128): Elaborating entity "triscFSM" for hierarchy "triscPCU:triscPCU_inst|triscFSM:comb_4" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscPCU/triscPCU.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at triscFSM.v(13): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.U" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.T" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.S" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.R" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.Q" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.P" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.O" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.N" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.M" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.L" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.K" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.J" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.I" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.H" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.G" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.F" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.E" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.D" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.C" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (10041): Inferred latch for "nextstate.B" at triscFSM.v(13) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscFSM/triscFSM.v Line: 13
+Info (12128): Elaborating entity "nbitbinary" for hierarchy "nbitbinary:ProgramCounter" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 53
+Info (12128): Elaborating entity "acc" for hierarchy "acc:acc_inst" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 64
+Info (12128): Elaborating entity "two2one" for hierarchy "acc:acc_inst|two2one:two2oneMUX" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/acc.v Line: 16
+Warning (10235): Verilog HDL Always Construct warning at two2one.v(8): variable "B" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/two2one.v Line: 8
+Warning (10235): Verilog HDL Always Construct warning at two2one.v(9): variable "A" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/two2one.v Line: 9
+Warning (10240): Verilog HDL Always Construct warning at two2one.v(7): inferring latch(es) for variable "Y", which holds its previous value in one or more paths through the always construct File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/two2one.v Line: 7
+Info (12128): Elaborating entity "BinUp" for hierarchy "acc:acc_inst|BinUp:RegCount" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/acc.v Line: 24
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu_inst" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 81
+Warning (10235): Verilog HDL Always Construct warning at alu.v(23): variable "Ad" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at alu.v(28): variable "Ad" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at alu.v(34): variable "La" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at alu.v(39): variable "Lx" is read inside the Always Construct but isn't in the Always Construct's Event Control File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 39
+Warning (10240): Verilog HDL Always Construct warning at alu.v(19): inferring latch(es) for variable "R", which holds its previous value in one or more paths through the always construct File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Info (10041): Inferred latch for "R[0]" at alu.v(19) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Info (10041): Inferred latch for "R[1]" at alu.v(19) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Info (10041): Inferred latch for "R[2]" at alu.v(19) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Info (10041): Inferred latch for "R[3]" at alu.v(19) File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Info (12128): Elaborating entity "AdderSubtractor" for hierarchy "alu:alu_inst|AdderSubtractor:comb_3" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 14
+Info (12128): Elaborating entity "fulladder" for hierarchy "alu:alu_inst|AdderSubtractor:comb_3|fulladder:s0" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/AdderSubtractor/AdderSubtractor.v Line: 26
+Info (12128): Elaborating entity "OnOffToggle" for hierarchy "OnOffToggle:DivideX2" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 92
+Info (12128): Elaborating entity "BinUp" for hierarchy "BinUp:AddressGen" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 101
+Info (12128): Elaborating entity "triscRAM" for hierarchy "triscRAM:RAM" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 111
+Info (12128): Elaborating entity "altsyncram" for hierarchy "triscRAM:RAM|altsyncram:altsyncram_component" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscRAM/triscRAM.v Line: 86
+Info (12130): Elaborated megafunction instantiation "triscRAM:RAM|altsyncram:altsyncram_component" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscRAM/triscRAM.v Line: 86
+Info (12133): Instantiated megafunction "triscRAM:RAM|altsyncram:altsyncram_component" with the following parameter: File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/triscRAM/triscRAM.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "../../My Documents/CSE 2441/Fall 2021/designs/triscRAM/triscRAM.mif"
@@ -743,92 +793,56 @@ Info (12133): Instantiated megafunction "triscRAM:RAM|altsyncram:altsyncram_comp
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6fl1.tdf
-    Info (12023): Found entity 1: altsyncram_6fl1 File: E:/Fall_2021/CSE_2441/trisc/trisc/db/altsyncram_6fl1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_6fl1 File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/db/altsyncram_6fl1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_6fl1" for hierarchy "triscRAM:RAM|altsyncram:altsyncram_component|altsyncram_6fl1:auto_generated" File: d:/quartus_prime/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "IR" for hierarchy "IR:IR" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 57
-Info (12128): Elaborating entity "triscPCU" for hierarchy "triscPCU:comb_30" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 59
-Warning (10034): Output port "C[6]" at triscPCU.v(6) has no driver File: E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v Line: 6
-Info (12128): Elaborating entity "fourtosixteen" for hierarchy "triscPCU:comb_30|fourtosixteen:comb_3" File: E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v Line: 9
-Info (12128): Elaborating entity "triscFSM" for hierarchy "triscPCU:comb_30|triscFSM:comb_4" File: E:/Fall_2021/CSE_2441/trisc/triscPCU/triscPCU.v Line: 14
-Warning (10240): Verilog HDL Always Construct warning at triscFSM.v(12): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.U" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.T" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.S" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.R" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.Q" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.P" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.O" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.N" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.M" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.L" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.K" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.J" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.I" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.H" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.G" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.F" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.E" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.D" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.C" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (10041): Inferred latch for "nextstate.B" at triscFSM.v(12) File: E:/Fall_2021/CSE_2441/trisc/triscFSM/triscFSM.v Line: 12
-Info (12128): Elaborating entity "acc" for hierarchy "acc:comb_31" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 61
-Info (12128): Elaborating entity "two2one" for hierarchy "acc:comb_31|two2one:two2oneMUX" File: E:/Fall_2021/CSE_2441/trisc/trisc/acc.v Line: 16
-Info (12128): Elaborating entity "alu" for hierarchy "alu:comb_36" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 65
-Warning (10235): Verilog HDL Always Construct warning at alu.v(23): variable "Ad" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at alu.v(28): variable "Ad" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at alu.v(34): variable "La" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 34
-Warning (10235): Verilog HDL Always Construct warning at alu.v(39): variable "Lx" is read inside the Always Construct but isn't in the Always Construct's Event Control File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 39
-Warning (10240): Verilog HDL Always Construct warning at alu.v(19): inferring latch(es) for variable "R", which holds its previous value in one or more paths through the always construct File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Info (10041): Inferred latch for "R[0]" at alu.v(19) File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Info (10041): Inferred latch for "R[1]" at alu.v(19) File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Info (10041): Inferred latch for "R[2]" at alu.v(19) File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Info (10041): Inferred latch for "R[3]" at alu.v(19) File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Info (12128): Elaborating entity "AdderSubtractor" for hierarchy "alu:comb_36|AdderSubtractor:comb_3" File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 14
-Info (12128): Elaborating entity "fulladder" for hierarchy "alu:comb_36|AdderSubtractor:comb_3|fulladder:s0" File: E:/Fall_2021/CSE_2441/trisc/AdderSubtractor/AdderSubtractor.v Line: 26
-Info (12128): Elaborating entity "binary2seven" for hierarchy "binary2seven:comb_41" File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 72
+Info (12128): Elaborating entity "binary2seven" for hierarchy "binary2seven:comb_51" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 116
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer RAMin File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 15
-Warning (14026): LATCH primitive "alu:comb_36|R[0]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[1]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[2]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[3]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[0]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[1]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[2]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (14026): LATCH primitive "alu:comb_36|R[3]" is permanently enabled File: E:/Fall_2021/CSE_2441/trisc/alu/alu.v Line: 19
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Warning (19017): Found clock multiplexer RAMin File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 15
+Warning (14026): LATCH primitive "alu:alu_inst|R[0]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[1]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[2]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[3]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[0]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[1]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[2]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
+Warning (14026): LATCH primitive "alu:alu_inst|R[3]" is permanently enabled File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/alu/alu.v Line: 19
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "BinUp:comb_37|Q[0]" is converted into an equivalent circuit using register "BinUp:comb_37|Q[0]~_emulated" and latch "BinUp:comb_37|Q[0]~1" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "BinUp:comb_37|Q[1]" is converted into an equivalent circuit using register "BinUp:comb_37|Q[1]~_emulated" and latch "BinUp:comb_37|Q[1]~6" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "BinUp:comb_37|Q[2]" is converted into an equivalent circuit using register "BinUp:comb_37|Q[2]~_emulated" and latch "BinUp:comb_37|Q[2]~11" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "BinUp:comb_37|Q[3]" is converted into an equivalent circuit using register "BinUp:comb_37|Q[3]~_emulated" and latch "BinUp:comb_37|Q[3]~16" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "acc:comb_31|BinUp:RegCount|Q[0]" is converted into an equivalent circuit using register "acc:comb_31|BinUp:RegCount|Q[0]~_emulated" and latch "acc:comb_31|BinUp:RegCount|Q[0]~1" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "acc:comb_31|BinUp:RegCount|Q[1]" is converted into an equivalent circuit using register "acc:comb_31|BinUp:RegCount|Q[1]~_emulated" and latch "acc:comb_31|BinUp:RegCount|Q[1]~6" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "acc:comb_31|BinUp:RegCount|Q[2]" is converted into an equivalent circuit using register "acc:comb_31|BinUp:RegCount|Q[2]~_emulated" and latch "acc:comb_31|BinUp:RegCount|Q[2]~11" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
-    Warning (13310): Register "acc:comb_31|BinUp:RegCount|Q[3]" is converted into an equivalent circuit using register "acc:comb_31|BinUp:RegCount|Q[3]~_emulated" and latch "acc:comb_31|BinUp:RegCount|Q[3]~16" File: E:/Fall_2021/CSE_2441/trisc/BinUp/BinUp.v Line: 10
+    Warning (13310): Register "nbitbinary:ProgramCounter|y[0]" is converted into an equivalent circuit using register "nbitbinary:ProgramCounter|y[0]~_emulated" and latch "nbitbinary:ProgramCounter|y[0]~1" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v Line: 22
+    Warning (13310): Register "nbitbinary:ProgramCounter|y[1]" is converted into an equivalent circuit using register "nbitbinary:ProgramCounter|y[1]~_emulated" and latch "nbitbinary:ProgramCounter|y[1]~6" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v Line: 22
+    Warning (13310): Register "nbitbinary:ProgramCounter|y[2]" is converted into an equivalent circuit using register "nbitbinary:ProgramCounter|y[2]~_emulated" and latch "nbitbinary:ProgramCounter|y[2]~11" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v Line: 22
+    Warning (13310): Register "nbitbinary:ProgramCounter|y[3]" is converted into an equivalent circuit using register "nbitbinary:ProgramCounter|y[3]~_emulated" and latch "nbitbinary:ProgramCounter|y[3]~16" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/nbitbinary/nbitbinary.v Line: 22
+    Warning (13310): Register "acc:acc_inst|BinUp:RegCount|Q[0]" is converted into an equivalent circuit using register "acc:acc_inst|BinUp:RegCount|Q[0]~_emulated" and latch "acc:acc_inst|BinUp:RegCount|Q[0]~1" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/BinUp/BinUp.v Line: 11
+    Warning (13310): Register "acc:acc_inst|BinUp:RegCount|Q[1]" is converted into an equivalent circuit using register "acc:acc_inst|BinUp:RegCount|Q[1]~_emulated" and latch "acc:acc_inst|BinUp:RegCount|Q[1]~6" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/BinUp/BinUp.v Line: 11
+    Warning (13310): Register "acc:acc_inst|BinUp:RegCount|Q[2]" is converted into an equivalent circuit using register "acc:acc_inst|BinUp:RegCount|Q[2]~_emulated" and latch "acc:acc_inst|BinUp:RegCount|Q[2]~11" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/BinUp/BinUp.v Line: 11
+    Warning (13310): Register "acc:acc_inst|BinUp:RegCount|Q[3]" is converted into an equivalent circuit using register "acc:acc_inst|BinUp:RegCount|Q[3]~_emulated" and latch "acc:acc_inst|BinUp:RegCount|Q[3]~16" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/BinUp/BinUp.v Line: 11
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "MDOut[7]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-    Warning (13410): Pin "MDOut[15]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-    Warning (13410): Pin "MDIn[7]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-    Warning (13410): Pin "MDIn[15]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 8
-    Warning (13410): Pin "C[13]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 10
-    Warning (13410): Pin "C[12]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 10
-    Warning (13410): Pin "C[6]" is stuck at GND File: E:/Fall_2021/CSE_2441/trisc/trisc/trisc.v Line: 10
+    Warning (13410): Pin "MDOut[7]" is stuck at GND File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 8
+    Warning (13410): Pin "MDIn[7]" is stuck at GND File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 8
+    Warning (13410): Pin "C[13]" is stuck at GND File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 11
+    Warning (13410): Pin "C[12]" is stuck at GND File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 11
+    Warning (13410): Pin "C[6]" is stuck at GND File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/trisc.v Line: 11
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "OnOffToggle:DivideX2|Mult0" File: E:/Fall_2021/CSE_2441/trisc/OnOffToggle/OnOffToggle.v Line: 15
+    Info (17048): Logic cell "OnOffToggle:DivideX2|Mult0" File: D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/OnOffToggle/OnOffToggle.v Line: 15
+Info (144001): Generated suppressed messages file D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/output_files/trisc.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 259 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 265 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 61 output pins
-    Info (21061): Implemented 176 logic cells
+    Info (21059): Implemented 63 output pins
+    Info (21061): Implemented 180 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Sat Dec 04 14:48:22 2021
-    Info: Elapsed time: 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Sun Dec 05 17:09:29 2021
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/School/UTA/Fall_2021/CSE_2441/trisc/trisc/trisc/output_files/trisc.map.smsg.
 
 

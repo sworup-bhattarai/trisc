@@ -1,5 +1,5 @@
 
-State Machine - |trisc|triscPCU:comb_30|triscFSM:comb_4|state
+State Machine - |trisc|triscPCU:triscPCU_inst|triscFSM:comb_4|state
 Name state.U state.T state.S state.R state.Q state.P state.O state.N state.M state.L state.K state.J state.I state.H state.G state.F state.E state.D state.C state.B state.A 
 state.A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 state.B 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
