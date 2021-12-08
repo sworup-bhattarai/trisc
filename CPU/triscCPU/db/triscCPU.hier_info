@@ -163,30 +163,30 @@ Y[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 |triscCPU|triscPCU:PCU|triscFSM:FSM
 SysClock => state~1.DATAIN
 StartStop => state~3.DATAIN
-LDA => nextstate.S.IN1
+LDA => nextstate.Q.IN1
 LDA => nextstate.P.OUTPUTSELECT
 LDA => nextstate.M.OUTPUTSELECT
 LDA => nextstate.I.DATAA
-STA => nextstate.S.IN0
+STA => nextstate.Q.IN0
 STA => nextstate.M.DATAA
 STA => nextstate.P.DATAA
-ADD => nextstate.S.IN1
+ADD => nextstate.Q.IN1
 SUB => ~NO_FANOUT~
 XOR => ~NO_FANOUT~
-INC => nextstate.S.IN1
+INC => nextstate.Q.IN1
 INC => nextstate.P.OUTPUTSELECT
 INC => nextstate.M.OUTPUTSELECT
 INC => nextstate.I.OUTPUTSELECT
 INC => nextstate.H.OUTPUTSELECT
 INC => nextstate.G.OUTPUTSELECT
 INC => nextstate.F.DATAA
-CLR => nextstate.S.IN1
+CLR => nextstate.Q.IN1
 CLR => nextstate.P.OUTPUTSELECT
 CLR => nextstate.M.OUTPUTSELECT
 CLR => nextstate.I.OUTPUTSELECT
 CLR => nextstate.H.OUTPUTSELECT
 CLR => nextstate.G.DATAA
-JMP => nextstate.S.IN1
+JMP => nextstate.Q.IN1
 JMP => nextstate.P.OUTPUTSELECT
 JMP => nextstate.M.OUTPUTSELECT
 JMP => nextstate.I.OUTPUTSELECT
@@ -229,25 +229,6 @@ y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|triscCPU|IR:BufferRegester
-D[0] => Q[0]~reg0.DATAIN
-D[1] => Q[1]~reg0.DATAIN
-D[2] => Q[2]~reg0.DATAIN
-D[3] => Q[3]~reg0.DATAIN
-CLK => Q[0]~reg0.CLK
-CLK => Q[1]~reg0.CLK
-CLK => Q[2]~reg0.CLK
-CLK => Q[3]~reg0.CLK
-CLR => Q[0]~reg0.ACLR
-CLR => Q[1]~reg0.ACLR
-CLR => Q[2]~reg0.ACLR
-CLR => Q[3]~reg0.ACLR
-Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |triscCPU|acc:Accumulator
@@ -303,6 +284,25 @@ D[0] => Q[0]~reg0.ADATA
 D[1] => Q[1]~reg0.ADATA
 D[2] => Q[2]~reg0.ADATA
 D[3] => Q[3]~reg0.ADATA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|triscCPU|IR:BufferRegester
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+CLK => Q[0]~reg0.CLK
+CLK => Q[1]~reg0.CLK
+CLK => Q[2]~reg0.CLK
+CLK => Q[3]~reg0.CLK
+CLR => Q[0]~reg0.ACLR
+CLR => Q[1]~reg0.ACLR
+CLR => Q[2]~reg0.ACLR
+CLR => Q[3]~reg0.ACLR
 Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE

@@ -24,27 +24,27 @@ module triscFSM
 								else if (STA) nextstate = M;
 									else if (ADD) nextstate = P; 
 				end
-			F: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000001000000; nextstate = B; end //INC=0110
+			F: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000001000000; nextstate = B; end //INC 0110
 			
-			G: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000010000000; nextstate = B; end //CLR=0111
+			G: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000010000000; nextstate = B; end //CLR 0111
 			
-			H: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b01000000000000; nextstate = B; end //JMP=1000
+			H: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b01000000000000; nextstate = B; end //JMP 1000
 			
-			I: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = J; end //LDA=0000	C0 = 0
-			J: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000000000; nextstate = K; end //LDA	C4 = 1
-			K: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000000000; nextstate = L; end //LDA	C4 = 1
-			L: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000001000; nextstate = B; end //LDA	C11 = 1; 
+			I: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = J; end //LDA 0000	
+			J: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000000000; nextstate = K; end //LDA	
+			K: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000000000; nextstate = L; end //LDA	
+			L: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000001000; nextstate = B; end //LDA	 
 			
-			M: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = N; end //STA=0001  C3 = 0
-			N: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000100000; nextstate = O; end //STA	C4 = 1 ; C5 = 1;
-			O: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000100000; nextstate = B; end //STA	C4 = 1 ; C5 = 1;
+			M: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = N; end //STA 0001  
+			N: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000100000; nextstate = O; end //STA	
+			O: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000100000; nextstate = B; end //STA	
 			
-			P: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = Q; end //ADD=0010
+			P: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = Q; end //ADD 0010
 			Q: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000000000; nextstate = R; end //ADD
 			R: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00001000000000; nextstate = S; end //ADD
-			S: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000000; nextstate = T; end //ADD
-			T: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000010000; nextstate = U; end //ADD
-			U: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000000001; nextstate = B; end //ADD
+			S: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000010000; nextstate = T; end //ADD
+			T: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000011001; nextstate = B; end //ADD
+			//U: begin {C0,C1,C2,C3,C4,C7,C8,C9,C5,C10,C11,C12,C13,C14} = 14'b00000000001001; nextstate = B; end //ADD
 			
 		endcase
 endmodule
